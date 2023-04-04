@@ -1,0 +1,17 @@
+.one {
+    /* one의 공간 = width + padding + border / margin은 one의 공간 밖의 영역*/
+    border: 1px solid blueviolet;
+    padding: 20px;
+    margin: 20px;
+    width: 200px;
+    box-sizing: border-box; /* 넓이에 padding과 border을 포함 */
+}
+.two {
+    border: 1px solid peru;
+    padding: 20px;
+    margin: 30px; /* margin 위,아래 겹치는 부분 발생할 때 병합되어 큰값만 나타남 */
+                  /*        옆으로 겹치는 부분은 각각 margin 값 나타남 */
+}
+.three {
+    border: 1px solid rgb(125, 207, 125);
+}

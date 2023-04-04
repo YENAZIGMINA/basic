@@ -1,0 +1,17 @@
+div {
+    color: rgb(59, 59, 59);
+    background-color: coral;
+}
+.인라인 { 
+    background-color: #43e4ae;
+    width: 300px; /* 적용안됨 */
+    height: 300px; /* 적용안됨 */
+}
+button {
+    width: 100px;
+    height: 50px;
+}
+img {
+    width: 50px;
+    height: 30px;
+}

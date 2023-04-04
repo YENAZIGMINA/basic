@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이름부르기</title>
+    <style>
+        div {color: rgb(56, 159, 255);}
+
+        .셋째 {color: brown;}
+        .딸 {background-color: coral;}
+
+        /* id="유일한 이름" - 이름 2개이상 만들 수 없음, 다른 태그에서 중복하여 붙일 수 없음 */
+        #둘째 {color: rgb(255, 17, 243);} 
+        #아들 {background-color: darkkhaki;}
+    </style>
+</head>
+<body>
+    <!-- <시작태그></종료태그> -> 주석처리 : Edit - toggle block command (ctrl + shift + A) -->
+
+    <!-- 복사 : alt + shift + 방향키↓ -->
+    <div class="딸">영역입니다1</div>
+    <div id="둘째">영역입니다2</div>
+    <div class="셋째 딸">영역입니다3</div> <!-- 띄워쓰기 전,후로 이름을 2개이상 만들 수 있음 -->
+    <div id="아들">영역입니다4</div> 
+</body>
+</html>

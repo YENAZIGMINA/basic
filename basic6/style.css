@@ -1,0 +1,57 @@
+*{margin: 0; padding: 0;}
+
+.전체 {
+    background-color: #d7ffa2;
+    width: 1000px; margin: 0 auto;
+    /* margin-left: auto;
+       margin-right: auto; -> auto값은 안쓰는 영역 활용하겠다는 의미 */
+    padding: 20px;
+}
+
+
+/* width 넓이는 부모의 값에 따라가고,
+   height 높이는 자식의 높이를 따라감 (높이값 설정안했을 경우) */
+
+.전체 .자식1 {
+    width: 25%;
+    background-color: #ffb5e6;
+    float: left; /* 떨어진 자식들 옆으로 붙이기 (옛날방식) = flex랑 비슷한 */
+}
+.전체 .자식2 {
+    width: 25%;
+    background-color: #ff97dc;
+    float: left;
+}
+.전체 .자식3 {
+    width: 25%;
+    background-color: #ff66cc;
+    float: left;
+}
+.전체 .자식4 {
+    width: 25%;
+    background-color: #ff30ba;
+    float: left;
+}
+.전체 .막내 {
+    /* <!-- float 작성시 부모가 자식을 인식못하므로, 작성한 막내 --> */
+    background-color: rgb(255, 229, 83);
+    clear: left; /* clear 작성시 부모가 자식을 다시 인식함 */
+}
+
+
+.바닥 {
+    background-color: rgb(204, 149, 255);
+    width: 1000px;
+    padding: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+}
+.바닥 .자식 {
+    background-color: rgb(172, 82, 255);
+    float: left;
+    width: 32%; /* 3등분일 때 33.3333%, 아래 여백 적용하기위해 32% 작성 */
+    margin-right: 2%; /* 사이공간 여백 */
+}
+.바닥 .자식3 {margin-right: 0;}
+.바닥 .막내 {clear: left;}
