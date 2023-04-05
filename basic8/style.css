@@ -1,0 +1,31 @@
+* {margin: 0; padding: 0;}
+
+/* 공통 */
+.약::after {
+    /* after는 인라인요소 */
+    content: ""; /* content:""; -> 가상선택자에 필수로 넣어야함 */
+    clear: both; /* clear는 block요소에 적용됨 */
+    display: block; /* 그래서, 블럭요소로 변경함 */
+}
+
+
+.아빠 {
+    background-color: rgb(135, 211, 135);
+    width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+.아빠 .자식 {
+    background-color: #ffc077;
+    width: 33.3333%;
+    height: 100px;
+    float: left;
+}
+
+.팔수 {margin-top: 30px;}
+.팔수 .자식8 {
+    width: 45%; height: 100px;
+    background-color: rgb(255, 225, 128);
+    float: left;
+}
+.팔수 .자식1 {margin-right: 10%;}

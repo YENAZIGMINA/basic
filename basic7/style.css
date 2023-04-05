@@ -1,0 +1,59 @@
+* {margin: 0; padding: 0;}
+
+/* ▼ 공통 */
+.아빠 .효자 {
+    clear: both; /* float값rhk 동일한 left 적용 / both는 방향상관없이 모두 적용 */
+}
+
+.아빠 {
+    width: 1000px;
+    background-color: rgb(255, 153, 116);
+    border: 1px solid #832525;
+
+    /* padding: 위 오른쪽 아래 왼쪽; -> 시계방향 */
+    padding: 10px 20px 30px 40px;
+    /* padding: 위 좌우 아래; */
+    padding: 10px 20px 30px;
+    /* padding: 상하 좌우 */
+    padding: 10px 20px;
+    /* padding: 상하좌우 */
+    padding: 20px; /* 동일한 태그가 있을 경우 제일 아래태그가 적용됨! */
+
+    margin-left: auto;
+    margin-right: auto;
+    margin: 0 auto; /* 위 left, right를 압축한 태그 */
+}
+
+/* .철수.아빠 붙여쓰면 철수이면서 아빠
+   .아빠 .자식 띄워쓰면 하위요소(자식) */
+.철수.아빠 .자식 {
+    background-color: crimson;
+    width: 32%;
+    margin-right: 2%;
+    height: 100px;
+    float: left;
+}
+.철수.아빠 .자식3 {
+    margin-right: 0;
+}
+
+.칠수 .자식 {
+    background-color: rgb(61, 61, 122);
+    color: aliceblue;
+    width: 23.5%;
+    margin-right: 2%;
+    height: 100px;
+    float: left;
+}
+
+.칠수 .자식2 {overflow: hidden;}
+.칠수 .자식2 video {width: 100%;}
+
+.칠수 .자식3 {overflow: hidden;}
+.칠수 .자식3 img {width: 100%;}
+
+.칠수 .자식4 {
+    margin-right: 0;
+    overflow: hidden;    
+}
+.칠수 .자식4 object {width: 100%;}
