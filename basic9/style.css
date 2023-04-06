@@ -1,0 +1,57 @@
+* {margin: 0; padding: 0;}
+body {padding: 50px;}
+
+
+.parent1 {
+    width: 500px;
+    height: 500px;
+    background-image: url(https://img.freepik.com/premium-vector/square-grid-paper-seamless-pattern-millimeter-paper-sheet-background_434359-268.jpg?w=2000);
+}
+.parent1 .child1 {
+    width: 100px;
+    height: 100px;
+    background-color: indianred;
+    position: relative; 
+    /* 주위에 아무런 영향을 주지않음 
+       ★자신의 영역을 기억함*/
+    left: 200px;
+}
+.parent1 .child1-2 {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(255, 222, 72);
+}
+
+
+.parent2 {
+    margin-top: 30px;
+    width: 500px;
+    height: 500px;
+    background-image: url(https://img.freepik.com/premium-vector/square-grid-paper-seamless-pattern-millimeter-paper-sheet-background_434359-268.jpg?w=2000);
+    position: relative;
+}
+.parent2 .child2 {
+    width: 100px;
+    height: 100px;
+    background-color: indianred;
+    position: absolute;
+    top: 50%; left: 50%; /* 부모로부터의 위치값임 (right보다 left가 더 셈) */
+    transform: translate(-50%, -50%); /* 좌측 모서리 자기자신 기준 값 */
+}
+
+.parent3 {
+    margin-top: 30px;
+    width: 500px;
+    height: 500px;
+    background-image: url(https://img.freepik.com/premium-vector/square-grid-paper-seamless-pattern-millimeter-paper-sheet-background_434359-268.jpg?w=2000);
+}
+.parent3 .child3 {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(177, 95, 231);
+    position: fixed; /* fixed는 화면(=부모)에 붙어서 고정, realative 필요없음 */
+    right: 0; bottom: 100px;
+}
+
+.parent4 {height: 2000px;}
+.parent4 .child4 {}
