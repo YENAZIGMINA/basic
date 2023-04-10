@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>slick</title>
+    <!-- ▼ 3) slick cdn 사이트 css (mini) 붙여넣기 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
+    <link rel="stylesheet" href="css/style.css"> <!-- 우리가 만든 css가 더 힘이 세야해서 밑으로 -->
+</head>
+<body>
+    <div class="전체">
+        <div class="배너">
+            <div class="your-class">
+                <div>
+                    <img src="https://img.megabox.co.kr/SharedImg/2023/01/30/igJ8xAMCtN6q6y2Wy1bjG3kmmNSjTr9V_1100.jpg" alt="강아지사진">
+                </div>
+                <div>
+                    <img src="https://img.megabox.co.kr/SharedImg/2023/02/02/BhT55InlrhGOzYQtWYEkumVBEf8GpKXr_1100.jpg" alt="차태현">
+                </div>
+                <div>
+                    <img src="https://img.megabox.co.kr/SharedImg/2023/01/30/0U72De6hi3T3VmVBpr46o8eSqBUCBbuh_1100.jpg" alt="차태현 유연석">
+                </div>
+              </div>
+        </div>
+    </div>
+
+    <!-- ▼ 1) 제이쿼리 1.x (mini) 붙여넣기 (CDN 사이트에서 긁어오기) (자바스크립트 쉽게만든 것이 제이쿼리) -->
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <!-- ▼ 2) slick cdn 사이트 js 붙여넣기 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script> 
+
+    <script> /* 4) 직접 타이핑작성 script글자만 */
+    /* 5) ▼ slick 사이트 usage - Initialize 붙여넣기 */
+        $(document).ready(function(){
+            $('.your-class').slick({
+                /* setting-name: setting-value --->>> 6) 주석처리함 */
+                autoplay:true /* slick사이트 상단 get it now - view git HUB - Setting 에서 복사붙여넣기*/
+            });
+        }); 
+    </script>
+
+</body>
+</html>
