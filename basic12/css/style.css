@@ -1,0 +1,42 @@
+@charset "UTF-8";
+
+*{margin: 0; padding: 0;}
+.치료::after {
+    /* after 인라인요소라 약효가 안듬, 블럭요소로 변경해줘야함 */
+    content: ""; /* 가상선택자 content 필수 */
+    clear: both;
+    display: block;
+}
+
+.전체 {
+    /* 전체의 넓이는 부모인 body를 따르고, 전체의 높이는 자식인 김일동을 따른다 */
+    border: 5px solid #ff0000;
+    padding: 20px;
+}
+.김일동 {
+    /* 김일동의 넓이는 부모인 전체를 따르고, 김일동의 높이는 자식인 텍스트(김일동)의 높이가 자신의 높이가 된다 */
+    border: 5px solid #2600ff;
+}
+.김이동 {
+    border: 5px solid #008812;
+    width: 300px;
+    margin: 0 auto;
+}
+.김삼동 {
+    margin-top: 30px;
+    border: 5px solid purple;
+}
+.김삼동 .삼자 {
+    background-color: pink;
+    width: 33.3333%;
+    float: left;
+}
+.김삼동 .약 { clear: both;}
+.김사동 {
+    border: 5px solid rgb(255, 99, 120);
+}
+.김사동 .사자 {
+    background-color: rgb(255, 230, 0);
+    width: 50%;
+    float: left;
+}
