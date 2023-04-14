@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test2</title>
+<style>
+    .철수 {
+        width: 300px;height: 300px;
+        background-color: rgb(255, 255, 111);
+
+    }
+    .철수 .자식 {
+        width: 50px; height: 50px;
+        background-color: blueviolet;
+        position: relative; /* position : static; 이 기본값 -> 안움직임 */
+        top: 50px; left: 50px;
+    }
+    .철수 .자식2 {
+        width: 50px; height: 50px;
+        background-color: rgb(255, 67, 108);
+    }
+</style>
+</head>
+<body>
+    <div class="철수">
+        <div class="자식">자식</div>
+        <div class="자식2">자식2</div>
+    </div>    
+</body>
+</html>
