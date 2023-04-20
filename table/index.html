@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>table</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="wrap">
+        <h1>표 만들기</h1>
+        <p>html에서 표를 구현할 때 사용하는 태그</p>
+        <ul>
+            <li>tr(table row):행</li>
+            <li>td(table data):열(행의 내용)</li>
+            <li>th(table heading):행,열의 제목(굵은서체, 가운데정렬 기본값)</li>
+            <li>속성 rowspan="3" : 3칸 행 병합</li>
+            <li>속성 colspan="2" : 2칸 열 병합</li>
+        </ul>
+        <div class="table1">
+            <h2>첫번째 table</h2>
+            <table>
+                <caption>표제목(필수 아님)</caption>
+                <tr>
+                    <!-- 행 만들기 -->
+                    <th>제목1</th> <!-- 제목 열 만들기 -->
+                    <th>제목2</th>
+                    <th>제목3</th>
+                </tr> <!-- 행만들기 end -->
+                <tr>
+                    <!-- 행 만들기 -->
+                    <td>1행 1열</td> <!-- 열 만들기 -->
+                    <td>1행 2열</td>
+                    <td>1행 3열</td>
+                </tr> <!-- 행만들기 end -->
+                <tr>
+                    <!-- 행 만들기 -->
+                    <td>2행 1열</td>
+                    <td>2행 2열</td>
+                    <td>2행 3열</td>
+                </tr> <!-- 행만들기 end -->
+                <tr>
+                    <td>3행 1열</td>
+                    <td>3행 2열</td>
+                    <td>3행 3열</td>
+                </tr>
+            </table>
+        </div> <!-- .table1 -->
+        <div class="table1-2">
+            <h2> table1 연습하기</h2>
+            <table>
+                <tr>
+                    <!-- 행만들기 -->
+                    <th>나이키</th> <!-- 제목 만들기 -->
+                    <th>아디다스</th>
+                    <th>필라</th>
+                    <th>퓨마</th>
+                </tr> <!-- 행만들기 end -->
+                <tr>
+                    <!-- 행만들기 -->
+                    <td>미국</td> <!-- 열 만들기 -->
+                    <td>영국</td>
+                    <td>대한민국</td>
+                    <td>프랑스</td>
+                </tr> <!-- 행만들기 end -->
+                <tr>
+                    <!-- 행만들기 -->
+                    <td>조안나</td>
+                    <td>마리아</td>
+                    <td>박대한</td>
+                    <td>봉주르</td>
+                </tr> <!-- 행만들기 end -->
+            </table>
+        </div> <!-- .table1-2 end -->
+        <div class="table2">
+            <h2>table2 - 몇번째 지정( :nth child )</h2>
+            <table>
+                <tr>
+                    <th>제목1</th>
+                    <th>제목2</th>
+                    <th>제목3</th>
+                </tr>
+                <tr>
+                    <td>1행 1열</td>
+                    <td>1행 2열</td>
+                    <td>1행 3열</td>
+                </tr>
+                <tr>
+                    <td>2행 1열</td>
+                    <td>2행 2열</td>
+                    <td>2행 3열</td>
+                </tr>
+                <tr>
+                    <td>3행 1열</td>
+                    <td>3행 2열</td>
+                    <td>3행 3열</td>
+                </tr>
+            </table>
+        </div> <!-- .table2 end -->
+        <div class="table3">
+            <h2>table3 - 행,열 합치기(+주석처리)</h2>
+            <table>
+                <tr>
+                    <th colspan="2">제목1</th> <!-- colspan으로 옆칸의 열과 합침 -->
+                    <!-- <th>제목2</th> --> <!-- 합치면서 열이 밀려나므로 주석처리 -->
+                    <th>제목3</th>
+                    <th>제목4</th>
+                </tr>
+                <tr>
+                    <td>1행 1열</td>
+                    <td colspan="2">1행 2열</td>
+                    <!-- <td>1행 3열</td> -->
+                    <td>1행 4열</td> <!-- rowspan으로 밑칸의 행과 합침 -->
+                </tr>
+                <tr>
+                    <td>2행 1열</td>
+                    <td rowspan="2">2행 2열</td>
+                    <td>2행 3열</td>
+                    <td>2행 4열</td> <!-- 합치면서 행이 밀려나므로 주석처리 -->
+                </tr>
+                <tr>
+                    <td>3행 1열</td>
+                    <!-- <td>3행 2열</td> -->
+                    <td>3행 3열</td>
+                    <td>3행 4열</td>
+                </tr>
+            </table>
+        </div> <!-- .table3 end -->
+        <div class="table4">
+            <h2>table4 - 4칸 합치기(1개 영역에 행,열span 동시작성)</h2>
+            <table>
+                <tr>
+                    <th colspan="3">제목1</th>
+               <!-- <th>제목2</th>
+                    <th>제목3</th> -->
+                </tr>
+                <tr>
+                    <td colspan="2" rowspan="2">1행 1열</td>
+                    <!-- <td>1행 2열</td> -->
+                    <td>1행 3열</td>
+                </tr>
+                <tr>
+                    <!-- <td>2행 1열</td> -->
+                    <!-- <td>2행 2열</td> --> <!-- ??? -->
+                    <td>2행 3열</td>
+                </tr>
+                <tr>
+                    <td>3행 1열</td>
+                    <td>3행 2열</td>
+                    <td>3행 3열</td>
+                </tr>
+            </table>
+        </div> <!-- .table4 -->
+        <div class="table5">
+            <h2>table5 - 제목 1열 나열</h2>
+            <table>
+                <tr>
+                    <th>제목1</th>
+                    <td>1행1열</td>
+                    <td>1행2열</td>
+                    <td>1행3열</td>
+                </tr>
+                <tr>
+                    <th>제목2</th>
+                    <td>2행1열</td>
+                    <td>2행2열</td>
+                    <td>2행3열</td>
+                </tr>
+                <tr>
+                    <th>제목3</th>
+                    <td>3행1열</td>
+                    <td>3행2열</td>
+                    <td>3행3열</td>
+                </tr>
+            </table>
+        </div> <!-- .table5 end -->
+        <div class="table6">
+            <h2>table6 - 제목 1열, 1행 나열</h2>
+            <table>
+                <tr>
+                    <th>  </th>
+                    <th>열제목1</th>
+                    <th>열제목2</th>
+                    <th>열제목3</th>
+                </tr>
+                <tr>
+                    <th>행제목1</th>
+                    <td>1행1열</td>
+                    <td>1행2열</td>
+                    <td>1행3열</td>
+                </tr>
+                <tr>
+                    <th>행제목2</th>
+                    <td>2행1열</td>
+                    <td>2행2열</td>
+                    <td>2행3열</td>
+                </tr>
+                <tr>
+                    <th>행제목3</th>
+                    <td>3행1열</td>
+                    <td>3행2열</td>
+                    <td>3행3열</td>
+                </tr>
+            </table>
+        </div> <!-- .table6 end -->
+        <div class="table7">
+            <h2>table7 - 짝수,홀수</h2>
+            <table>
+                <tr>
+                    <th>제목1</th>
+                    <th>제목2</th>
+                    <th>제목3</th>
+                    <th>제목4</th>
+                    <th>제목5</th>
+                    <th>제목6</th>
+                </tr>
+                <tr>
+                    <td>1행 1열</td>
+                    <td>1행 2열</td>
+                    <td>1행 3열</td>
+                    <td>1행 4열</td>
+                    <td>1행 5열</td>
+                    <td>1행 6열</td>
+                </tr>
+                <tr>
+                    <td>2행 1열</td>
+                    <td>2행 2열</td>
+                    <td>2행 3열</td>
+                    <td>2행 4열</td>
+                    <td>2행 5열</td>
+                    <td>2행 6열</td>
+                </tr>
+                <tr>
+                    <td>3행 1열</td>
+                    <td>3행 2열</td>
+                    <td>3행 3열</td>
+                    <td>3행 4열</td>
+                    <td>3행 5열</td>
+                    <td>3행 6열</td>
+                </tr>
+                <tr>
+                    <td>4행 1열</td>
+                    <td>4행 2열</td>
+                    <td>4행 3열</td>
+                    <td>4행 4열</td>
+                    <td>4행 5열</td>
+                    <td>4행 6열</td>
+                </tr>
+                <tr>
+                    <td>5행 1열</td>
+                    <td>5행 2열</td>
+                    <td>5행 3열</td>
+                    <td>5행 4열</td>
+                    <td>5행 5열</td>
+                    <td>5행 6열</td>
+                </tr>
+                <tr>
+                    <td>6행 1열</td>
+                    <td>6행 2열</td>
+                    <td>6행 3열</td>
+                    <td>6행 4열</td>
+                    <td>6행 5열</td>
+                    <td>6행 6열</td>
+                </tr>
+            </table>
+        </div> <!-- .table7 end -->
+        <div class="table8">
+            <h2>table8 - hover</h2>
+            <table>
+                <tr>
+                    <th>제목1</th>
+                    <th>제목2</th>
+                    <th>제목3</th>
+                    <th>제목4</th>
+                    <th>제목5</th>
+                    <th>제목6</th>
+                </tr>
+                <tr>
+                    <td>1행 1열</td>
+                    <td>1행 2열</td>
+                    <td>1행 3열</td>
+                    <td>1행 4열</td>
+                    <td>1행 5열</td>
+                    <td>1행 6열</td>
+                </tr>
+                <tr>
+                    <td>2행 1열</td>
+                    <td>2행 2열</td>
+                    <td>2행 3열</td>
+                    <td>2행 4열</td>
+                    <td>2행 5열</td>
+                    <td>2행 6열</td>
+                </tr>
+                <tr>
+                    <td>3행 1열</td>
+                    <td>3행 2열</td>
+                    <td>3행 3열</td>
+                    <td>3행 4열</td>
+                    <td>3행 5열</td>
+                    <td>3행 6열</td>
+                </tr>
+                <tr>
+                    <td>4행 1열</td>
+                    <td>4행 2열</td>
+                    <td>4행 3열</td>
+                    <td>4행 4열</td>
+                    <td>4행 5열</td>
+                    <td>4행 6열</td>
+                </tr>
+                <tr>
+                    <td>5행 1열</td>
+                    <td>5행 2열</td>
+                    <td>5행 3열</td>
+                    <td>5행 4열</td>
+                    <td>5행 5열</td>
+                    <td>5행 6열</td>
+                </tr>
+                <tr>
+                    <td>6행 1열</td>
+                    <td>6행 2열</td>
+                    <td>6행 3열</td>
+                    <td>6행 4열</td>
+                    <td>6행 5열</td>
+                    <td>6행 6열</td>
+                </tr>
+            </table>
+        </div> <!-- .table8 end -->
+        <div class="table9">
+            <h2>table9 - colgroup하여 그룹별 속성지정</h2>
+            <table>
+                <colgroup>
+                    <col span="2"> <!-- row그룹은 없음 -->
+                    <col span="2">
+                    <col span="2">
+                </colgroup>
+                <tr>
+                    <th>제목1</th>
+                    <th>제목2</th>
+                    <th>제목3</th>
+                    <th>제목4</th>
+                    <th>제목5</th>
+                    <th>제목6</th>
+                </tr>
+                <tr>
+                    <td>1행 1열</td>
+                    <td>1행 2열</td>
+                    <td>1행 3열</td>
+                    <td>1행 4열</td>
+                    <td>1행 5열</td>
+                    <td>1행 6열</td>
+                </tr>
+                <tr>
+                    <td>2행 1열</td>
+                    <td>2행 2열</td>
+                    <td>2행 3열</td>
+                    <td>2행 4열</td>
+                    <td>2행 5열</td>
+                    <td>2행 6열</td>
+                </tr>
+                <tr>
+                    <td>3행 1열</td>
+                    <td>3행 2열</td>
+                    <td>3행 3열</td>
+                    <td>3행 4열</td>
+                    <td>3행 5열</td>
+                    <td>3행 6열</td>
+                </tr>
+                <tr>
+                    <td>4행 1열</td>
+                    <td>4행 2열</td>
+                    <td>4행 3열</td>
+                    <td>4행 4열</td>
+                    <td>4행 5열</td>
+                    <td>4행 6열</td>
+                </tr>
+                <tr>
+                    <td>5행 1열</td>
+                    <td>5행 2열</td>
+                    <td>5행 3열</td>
+                    <td>5행 4열</td>
+                    <td>5행 5열</td>
+                    <td>5행 6열</td>
+                </tr>
+                <tr>
+                    <td>6행 1열</td>
+                    <td>6행 2열</td>
+                    <td>6행 3열</td>
+                    <td>6행 4열</td>
+                    <td>6행 5열</td>
+                    <td>6행 6열</td>
+                </tr>
+            </table>
+        </div> <!-- .table9 end -->
+    </div> <!-- .wrap end -->
+</body>
+
+</html>
