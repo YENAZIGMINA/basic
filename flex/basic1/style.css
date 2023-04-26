@@ -1,0 +1,21 @@
+@charset "UTF-8";
+
+* {
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+}
+body {color: #333;}
+
+.container {
+    border: 2px solid #000;
+    background-color: #9955c7;
+    /* 🔸flex는 부모한테 줘야함!!!🔸 */
+    display: flex;
+    flex-direction: row;  /* 기본값 */
+/* flex-direction: column(밑으로 떨어뜨리기), row-reverse, column-reverse */
+/* 줄 떨어뜨리는거 direction은 공간이 여유로울 때, flex-wrap은 공간이 좁을때! */
+}
+.container .item {
+    border: 2px solid #f89646;
+    background-color: #fff177;
+}
