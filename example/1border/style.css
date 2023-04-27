@@ -1,0 +1,64 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.loader {
+    height: 100vh;
+    background-color: rgb(255, 205, 213);
+}
+
+.loader .loader_blob {
+    width: 480px;
+    height: 480px;
+    overflow: hidden;
+    position: relative;
+    /* 포지션 있어야 left, top 이동함 */
+    left: calc(50% - 240px);
+    top: calc(50% - 240px);
+    /* 컴퓨터는 단위가 다른 %와 px를 계산 못하므로 calc로 작성 */
+
+    /* 🔹수평:h,수직:v,왼쪽:l,오른쪽:r, 위쪽:t,아래쪽:b */
+    /* border-radius: 20px; tl,tr,br,bl */
+    /* border-radius: 45% 55% 70% 30% / 36% 28% 72% 64% ;  */
+    /* 앞(수평) / 뒤(수직) */
+    /* border-radius: htl htr hbr hbl / vtl vtr vbr vbl ;  */
+    animation: go 4s linear infinite alternate;
+}
+
+.loader .loader_blob img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.ro {
+    position: absolute;
+    left: calc(50% - 240px);
+    top: calc(50% - 240px);
+    width: 480px; height: 480px;
+}
+.ro .loader_blob2 {
+    width: 480px; height: 480px;
+    border: 1px solid rgb(199, 55, 91);
+}
+
+
+
+@keyframes go {
+    0% {
+        border-radius: 61% 39% 57% 43% / 28% 56% 44% 72%;
+        transform: scale(0.98);
+    }
+
+    50% {
+        border-radius: 54% 46% 48% 52% / 37% 45% 55% 63%;
+    }
+
+    100% {
+        border-radius: 47% 53% 35% 65% / 47% 53% 47% 53%;
+        transform: scale(1.05);
+    }
+}
