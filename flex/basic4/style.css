@@ -1,0 +1,34 @@
+@charset "UTF-8";
+
+* {
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+}
+body {color: #333;}
+
+.container {
+    border: 2px solid #3897ce;
+    background-color: #a7dcff;
+}
+.container .item {
+    border: 2px solid #b92a5a;
+    background-color: #ffa4d6;
+    width: 40%;
+}
+
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100vh;
+    align-content: center;
+    align-content: flex-start;
+    align-content: flex-end;
+    align-content: space-between;
+    align-content: space-around;
+    align-content: space-evenly;
+}
+.container .item {
+    width: 30%;
+    height: 100px;
+}

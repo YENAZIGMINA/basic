@@ -1,0 +1,36 @@
+@charset "UTF-8";
+
+* {
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+}
+body {color: #333;}
+
+.container {
+    border: 2px solid #a32861;
+    background-color: #ff9ece;
+}
+.container .item {
+    border: 2px solid #517bca;
+    background-color: #bde4f0;
+}
+
+
+.container {
+    display: flex;
+}
+.container .item {
+    /* ✔🔸flex-basis : 줄어들어라! 늘어나지 마라 */
+    flex-basis: auto; /* 기본값 */
+    /* flex-basis: 100px; */
+    width: 100px;
+
+    /* ✔🔸flex-glow : 늘어나지 마라! 
+           0-false, 0을 제외한 나머지 숫자는 true*/
+    flex-grow: 0; /* 기본값 */
+    flex-grow: 1;
+
+    /* ✔🔸줄어들어라 */
+    flex-shrink: 1; /* 기본값 */
+    flex-shrink: 0; /* 0은 줄어들지마라 */
+}

@@ -1,0 +1,28 @@
+@charset "UTF-8";
+
+* {
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+}
+body {color: #333;}
+
+.container {
+    border: 2px solid #a32861;
+    background-color: #ff9ece;
+}
+.container .item {
+    border: 2px solid #517bca;
+    background-color: #bde4f0;
+}
+
+
+.container {
+    display: flex;
+}
+.container .item:nth-child(1) {
+    width: 200px;
+    flex-shrink: 0; /* 줄어들어라가 기본값이지만, 줄어들지 마라로 적용 */
+}
+.container .item:nth-child(2) {
+    flex-grow: 1; /* 늘어나지 마라가 기본값이지만, 늘어나라로 적용 */
+}

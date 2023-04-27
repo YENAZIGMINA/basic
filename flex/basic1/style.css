@@ -11,11 +11,23 @@ body {color: #333;}
     background-color: #9955c7;
     /* 🔸flex는 부모한테 줘야함!!!🔸 */
     display: flex;
+    /* display: inline-flex; 인라인요소를 가진 플렉스 */
     flex-direction: row;  /* 기본값 */
 /* flex-direction: column(밑으로 떨어뜨리기), row-reverse, column-reverse */
-/* 줄 떨어뜨리는거 direction은 공간이 여유로울 때, flex-wrap은 공간이 좁을때! */
+/* ❗줄 떨어뜨리는거 direction은 공간이 여유로울 때, flex-wrap은 공간이 좁을때! */
+
+    /* 줄넘김(떨어트림) 처리 */
+    flex-wrap: wrap;
+    /* flex-wrap: wrap-reverse; */
+    
+    /* 메인축 방향과 줄넘김 축약형 */
+    flex-flow: row wrap;
+    /* flex-flow: row no-wrap; */
+
+
 }
 .container .item {
     border: 2px solid #f89646;
     background-color: #fff177;
+    width: 40%;
 }

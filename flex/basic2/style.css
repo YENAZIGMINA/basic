@@ -1,0 +1,41 @@
+@charset "UTF-8";
+
+* {
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+}
+body {color: #333;}
+
+.container {
+    border: 2px solid #000;
+    background-color: #9955c7;
+}
+.container .item {
+    border: 2px solid #f89646;
+    background-color: #fff177;
+}
+
+
+
+.container {
+    display: flex;
+    height: 100vh;
+
+    /* 메인축 방향으로 이동 */
+    justify-content: flex-start; /* 기본값 */
+/*  justify-content: flex-end;
+    justify-content: center;
+    justify-content: space-between;
+    justify-content: space-around;
+    justify-content: space-evenly; */
+
+    /* 메인축과 크로스방향으로 이동 (오뎅먹는 방향) */
+    align-items: stretch; /* 기본값(부모의 높이값을 따라감) */
+/*  align-items: center;
+    align-items: flex-start;
+    align-items: flex-end; */
+}
+.container .item {
+    height: 100px;
+    width: 200px;
+}

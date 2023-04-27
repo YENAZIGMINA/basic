@@ -1,0 +1,41 @@
+@charset "UTF-8";
+
+* {
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: #333; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    border: 2px solid #000;
+    background-color: #9955c7;
+    width: 500px; height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container .item {
+    border: 2px solid #f89646;
+    background-color: #fff177;
+    width: 200px; height: 200px;
+}
+
+
+
+/* 🔸flex 줄 아래로 떨어트리기 */
+/* ➰공간이 여유로울 때 (flex-direction: column 쓰고)
+    flex-wrap: wrap; -> 공간 여유로우면 안 떨어짐
+    flex-direction: column;  -> ✔공간 여유로워도 아래로 떨어뜨릴 수 있는데,
+                                1줄 축으로 세워지면서 떨어짐 */
+
+/* ➰공간이 좁을 때 (flex-wrap: wrap 써라)
+    flex-wrap: wrap; -> ✔공간 여유없을 때 '공간부족한 만큼'만 아래로 떨어짐
+    flex-direction: column; -> 공간 여유없을 때 아래로 떨어지는데, 1줄 축으로 세워지면서
+                               좁은 공간안에서 짜부되면서 떨어짐 */
