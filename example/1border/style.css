@@ -39,12 +39,19 @@
     left: calc(50% - 240px);
     top: calc(50% - 240px);
     width: 480px; height: 480px;
+    animation: rotate 4s linear infinite alternate; /* alternate 실행,반실행 */
 }
 .ro .loader_blob2 {
+    position: absolute;
+    top: 0; left: 0;
     width: 480px; height: 480px;
     border: 1px solid rgb(199, 55, 91);
+    animation: go 4s linear infinite alternate;
 }
-
+.ro .loader_blob2 .lb2 { /* 라인 두개로 보이게 하기 - 안됨 */
+    animation-delay: 2s;
+    animation-fill-mode: both; /* 예제14 참고 */
+}
 
 
 @keyframes go {
@@ -61,4 +68,9 @@
         border-radius: 47% 53% 35% 65% / 47% 53% 47% 53%;
         transform: scale(1.05);
     }
+}
+
+@keyframes rotate {
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(100deg);}
 }

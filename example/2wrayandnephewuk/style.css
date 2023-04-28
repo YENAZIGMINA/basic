@@ -1,0 +1,17 @@
+@charset "UTF-8";
+:root{
+    --color:red;
+    --color2:blue;
+} 
+/* css에서 변수를 만들 때 ->  :root{} 
+   변수명앞에 --작성 */
+
+*{margin: 0; padding: 0;}
+
+
+h1 {color:var(--color);}
+.page1 {}
+.page1 .card-wrapper {}
+.page1 .card-wrapper .card {}
+.page1 .card-wrapper .card span {}
+.page1 .card-wrapper .card img {}
