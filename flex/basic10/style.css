@@ -1,0 +1,29 @@
+@charset "UTF-8";
+
+* {
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+}
+body {
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* 높이는 자식값 따르니까 부모에 화면전체 설정함 */
+}
+
+.container {
+    border: 2px solid #3478b8;
+    background-color: #6fb7f1;
+    display: flex;
+    width: 500px; height: 500px;
+    text-align: center;
+}
+.container .item {
+    border: 2px solid #ce4298;
+    background-color: #ff9fc4;
+    width: 200px; height: 200px;
+    align-self: center; /* align-self : 나 자신을 스스로 정렬할 수 있다 */
+    align-self: flex-start;
+    align-self: flex-end;
+}

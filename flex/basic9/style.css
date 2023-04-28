@@ -1,0 +1,33 @@
+@charset "UTF-8";
+
+* {
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+}
+body {color: #333;}
+
+.container {
+    border: 2px solid #000;
+    background-color: #9955c7;
+    margin-top: 100px;
+    display: flex;
+}
+.container .item {
+    border: 2px solid #f89646;
+    background-color: #fff177;
+/*  flex-basis: auto; 기본값 인데 숫자1개만 작성하여 압축하면 0%가 적용된다 */
+    flex: 1; /* 압축 */
+    flex: 1 1 0%; /* <-- 1으로 작성하면 이 값 */
+/*  flex: flex-grow flex-shrink flex-basis; */
+/*  flex: 0 1 auto; 기본값 */
+
+    flex: 1 1 300px;
+/*  flex-grow : 1; 늘어나는 공간이 있다면 늘어나겠다
+    flex-shrink: 1; 줄어들 공간이 있다면 줄어들겠다
+    flex-basis: auto; 넓이를 설정했다면 그것을 인식하겠다 */
+}
+
+.container .item:nth-child(1) {
+    width: 200px; /* flex에 basis값:auto 이어야 넓이 값을 인식함 */
+    flex: 1 0 auto;
+}

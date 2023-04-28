@@ -1,0 +1,131 @@
+@charset "UTF-8";
+
+*{margin: 0; padding: 0;}
+a {color: #222; text-decoration: none;}
+li {list-style: none;}
+body {
+    background-color: #eee;
+}
+
+
+.wrap {
+    display: flex;
+    flex-wrap: wrap; /* 넘치는 것이 있으면 밑으로 떨어트려라 */
+}
+
+
+/* 💛header */
+.header {
+    width: 100%; height: 80px;
+    background-color: gray;
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+    padding: 0 20px;
+}
+.header h1 {}
+.header .form {
+    margin-left: auto; /* 안쓰는 왼쪽공간 활용-> justify-content: space-between대신 사용! */
+    width: 250px;
+}
+.header .form .search {
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    height: 30px;
+}
+.header .form input[type="submit"] {
+    border-radius: 5px;
+    border: 0;
+    width: 60px; height: 30px;
+    background-color: gold;
+}
+
+
+/* 💛menu */
+.menu {
+    width: 100%;
+    display: flex;
+}
+.menu li {
+    width: 25%; 
+    background-color: gold;
+    text-align: center;
+    transition: 0.3s;
+}
+.menu li:hover {
+    width: 35%;
+    background-color:rgb(231, 197, 0) ;
+}
+.menu li .menu-link {
+    padding: 15px 0;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+
+/* 💛.primary */
+.primary {padding-top: 20px;}
+.primary .card-list {
+    display: flex; /* ✔가장 긴 높이의 div등 요소 기준으로 높이가 맞춰짐 */
+    flex-wrap: wrap;
+}
+.primary .card-list .card-item {
+    width: 33.3333%;
+    padding: 0 15px;
+    box-sizing: border-box;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column; /* 공간여유로울때, 밑으로 떨어트리기 (보다는 축 변경!) */
+}
+.primary .card-list .card-item .card-img {
+    background: url(https://cdn.pixabay.com/photo/2018/05/11/08/11/dog-3389729_960_720.jpg);
+    background-size: cover;
+    padding-bottom: 80%; /* 부모의 넓이값 기준으로 % 패딩을 사용하여 높이를 나타냄 */
+                            /* (반응형에서 패딩값으로 높이 설정많이함) */
+    width: 100%;
+}
+.primary .card-list .card-item .card-desc {
+    padding: 15px;
+    background-color: #fff;
+    flex-grow: 1; 
+    /* ✔ 적용전에는 글자의 길이에 따라 높이가 다른데, glow의 늘어나라! 적용하면 맞춰짐 */
+    /* ❗ ↑flex를 적용하면 height는 컨테이너의 높이만큼 늘어남 */
+}
+
+
+/* 💛secondard */
+.secondard {
+    width: 300px;
+    padding: 15px;
+    box-sizing: border-box;
+    background-color: #fff;
+}
+.secondard .info-list {}
+.secondard .info-list .info-list-item {
+    display: flex;
+    margin: 7px 0;
+}
+.secondard .info-list .info-list-item::before {
+    content: '♥';
+    margin-right: 7px; /* 아래위 마진병합 됨 */
+}
+
+.secondard .user-list {}
+.secondard .user-list .user-item {
+    display: flex; /* 🔹1) flex하면 사진이 찌그러짐 */
+    align-items: center;
+}
+.secondard .user-list .user-item .user-photo {
+    background: url(https://cdn.pixabay.com/photo/2018/11/02/19/04/sunflowers-3790834_960_720.jpg);
+    background-size: cover;
+    width: 50px; height: 50px;
+    border: 2px solid #ac7e00;
+    border-radius: 50%;
+    flex-shrink: 0;  /* 🔹2)해결 : 줄어들지마라 */
+}
+.secondard .user-list .user-item .user-name {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}

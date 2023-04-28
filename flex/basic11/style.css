@@ -1,0 +1,28 @@
+@charset "UTF-8";
+
+* {
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+}
+body {color: #333;}
+
+.container {
+    border: 2px solid #444c7c;
+    background-color: #8bb9ff;
+    display: flex;
+
+}
+.container .item {
+    border: 2px solid #b62d8d;
+    background-color: #ff9ed3;
+}
+
+.container .item:nth-child(1) {
+    order: 3;
+}
+.container .item:nth-child(2) {
+    order: 1;
+}
+.container .item:nth-child(3) {
+    order: 2;
+}
