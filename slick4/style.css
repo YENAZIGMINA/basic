@@ -1,0 +1,40 @@
+@charset "UTF-8";
+
+
+*{margin: 0; padding: 0;}
+
+.figma { width: 500px;}
+.slider {
+    padding: 20px;
+}
+.slider img {
+    width: 100%;
+}
+
+.slider .slick-slide {
+    /* .slick-slide는 .figma>div인셈, slick에서 만든 클래스명 */
+    padding-right: 25px;
+}
+/* ↓개발자모드에서 버튼집어서 클래스명 체크 */
+.slider .slick-dots {
+    position: absolute;
+    bottom: 15px; right: 10px;
+}
+.slider .slick-dots li {
+    float: left;
+    width: 12px; height: 12px;
+    background-color: #dedede;
+    list-style: none;
+    margin: 0 5px;
+    border-radius: 50%;
+}
+.slider .slick-dots li.slick-active {
+    background-color: #00a651;
+}
+.slider .slick-dots li button {
+    /* 버튼없애기 */
+    font-size: 0;
+    line-height: 0;
+    background-color: none;
+    border: 0;
+}

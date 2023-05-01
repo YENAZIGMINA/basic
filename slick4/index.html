@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>slick4 - 슬릭 라이브러리 가져오기</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+    <!-- 4) slick cdn - css -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="slider">
+        <div class="figma"> <!-- 1) slick usage / 클래스명 제이쿼리랑 이름같아야함 -->
+            <div>
+                <img src="product_detail_01.jpg" alt="이미지1">
+            </div>
+            <div>
+                <img src="product_detail_02.jpg" alt="이미지2">
+            </div>
+            <div>
+                <img src="product_detail_01.jpg" alt="이미지1">
+            </div>
+            <div>
+                <img src="product_detail_02.jpg" alt="이미지2">
+            </div>
+        </div> <!-- .figma end -->
+    </div> <!-- .slider end -->
+
+
+
+
+    <!-- 제이쿼리 -->
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script> <!-- 2) code jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <!-- 3) slick cdn - js -->
+
+    <script>
+        /* 5) slick - Initialize */
+        $('document').ready(function () {
+            $('.figma').slick({
+                slidesToShow: 1.1,
+                /* centerPadding: 10px, */
+                arrows:false, //넥스트,프리 버튼없애기 - slick > get it now > gitHUB
+                dots:true,
+            });
+        });
+    </script>
+
+</body>
+
+</html>
