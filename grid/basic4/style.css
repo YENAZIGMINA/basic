@@ -1,0 +1,35 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ❗ grid는 flex보다 나중에 나왔음
+   ❗ flex는 한방향 배치 구현
+   ❗ grid는 두방향 배치 구현
+   두 개를 다 안다면 알맞은 곳에 사용할 수 있다
+   전체구성은 grid로 하고, 부분구성은 flex로 하는 경우가 많다 */
+
+.container {
+    border: 2px solid #684591;
+    background-color: rgb(204, 145, 206);
+    padding: 10px;
+}
+.item {
+    border: 2px solid #684591;
+    background-color: rgb(255, 250, 184);
+    padding: 10px;
+}
+
+/* gap: 그리드 셀 사이 간격을 설정함 */
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, minmax(200px, auto));
+    height: 80vh;
+    column-gap: 20px;
+    row-gap: 20px;
+    gap: 20px;
+}

@@ -1,0 +1,35 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.container {
+    border: 2px solid #684591;
+    background-color: rgb(204, 145, 206);
+    padding: 10px;
+    display: grid;
+    /* ❗ grid와 flex는 자식이 inline요소라 하더라도 block요소로 바꿔버린다. */
+    grid-template-columns: 100px 300px 200px 200px;/* 수치값1개당 1줄 */
+    grid-template-columns: 300px 1fr 300px;
+    /* fr:fraction --> 비율 */
+    grid-template-columns: 1fr 2fr 1fr ;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr ;
+    grid-template-columns: repeat(4, 1fr) ; /* 1fr을 4번(4칸) 반복한다 */
+    grid-template-columns: repeat(3, 1fr 2fr 1fr);
+
+    grid-template-columns: 100px 1fr 200px; /* 윗 태그땜에 속성변화되어 걍 작성한거 */
+    grid-template-rows: 200px 200px; /* 설정한 1,2줄은 높이가 200px로 적용되고, 나머지줄은 화면사이즈에 따라 auto가 된다 */
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr) 300px 300px;
+
+    height: 80vh; /* row 잡을때는 높이 설정해야함 */
+}
+.item {
+    border: 2px solid #684591;
+    background-color: rgb(255, 250, 184);
+    padding: 10px;
+}
