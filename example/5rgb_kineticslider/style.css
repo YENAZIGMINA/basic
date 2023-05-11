@@ -1,3 +1,41 @@
 @charset "UTF-8";
 
-*{margin: 0; padding: 0;}
+* {
+    margin: 0;
+    padding: 0;
+}
+a {text-decoration: none; color: #fff;}
+
+section {
+    position: relative;
+    height: 100vh;
+}
+
+section .rgb {
+    width: 500px;
+    height: 300px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+#rgbKineticSlider canvas {
+    /* slider 자체에서 만들어진 canvas */
+    position: absolute;
+    /* 위치 맞추기위해서 */
+}
+
+nav .main-nav {
+    position: absolute;
+    top: 50%;
+    background-color: #ff5454;
+    width: 55px; height: 30px;
+    border-radius: 10px;
+    text-align: center; line-height: 30px;
+    font-size: 12px;
+    letter-spacing: 2px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+nav .prev {left: 29%;}
+nav .next {right: 29%;}

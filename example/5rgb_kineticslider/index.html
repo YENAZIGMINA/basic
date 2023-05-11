@@ -10,9 +10,14 @@
 </head>
 
 <body>
-    <!-- 2) gitHUB - 마크업복붙 -->
+    <!-- 2) gitHUB으로 돌아가서 - 마크업복붙 -->
     <!-- slider -->
-    <div id="rgbKineticSlider" class="rgbKineticSlider"></div>
+    <section>
+        <div class="rgb">
+            <div id="rgbKineticSlider" class="rgbKineticSlider"></div>
+        </div>
+    </section>
+    
 
     <!-- slider nav -->
     <nav>
@@ -21,7 +26,11 @@
     </nav>
 
 
-    <!-- 1)rgbkineticslider - gitHUB 코드펜사이트 - 셋팅 in 주소 복붙 -->
+
+    <!-- 💛코드 제이쿼리 -->
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+
+    <!-- 1)rgbkineticslider - gitHUB 코드펜사이트 - 셋팅 - 주소 복붙 <script> -->
     <script src="https://cdn.jsdelivr.net/gh/hmongouachon/rgbKineticSlider/js/libs/TweenMax.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/hmongouachon/rgbKineticSlider/js/libs/imagesLoaded.pkgd.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/hmongouachon/rgbKineticSlider/js/libs/pixi.min.js"></script>
@@ -51,8 +60,8 @@
             itemsTitles: texts, // array of titles / subtitles
 
             // displacement images sources
-            backgroundDisplacementSprite: 'img/map-9.jpg', // slide displacement image 
-            cursorDisplacementSprite: 'img/displace-circle.png', // cursor displacement image
+            backgroundDisplacementSprite: 'img/14.jpg', // slide displacement image 
+            cursorDisplacementSprite: 'img/8.jpg', // cursor displacement image
 
             // cursor displacement effect 
             cursorImgEffect: true, // enable cursor effect
@@ -103,6 +112,16 @@
             mobileTextSubTitleOffsetTop: 90, // mobile subtitle offset top
 
         });
+    </script>
+
+    <script>
+        //오토플레이
+        //setInterval(할일,시간) 시간마다 할일
+        setInterval(function(){
+            $('nav .next').click();
+        },3000) //3초마다 할일실행
+
+
     </script>
 
 </body>
