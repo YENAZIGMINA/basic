@@ -7,24 +7,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>rgb_kineticslider</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" />
+
 </head>
 
 <body>
     <!-- 2) gitHUB으로 돌아가서 - 마크업복붙 -->
     <!-- slider -->
+
     <section>
         <div class="rgb">
             <div id="rgbKineticSlider" class="rgbKineticSlider"></div>
+            <!-- slider nav -->
+            <nav>
+                <a href="#" class="main-nav prev" data-nav="previous"><i class="fas fa-chevron-left"></i><span></span></a>
+                <a href="#" class="main-nav next" data-nav="next"><i class="fas fa-chevron-right"></i><span></span></a>
+            </nav>
         </div>
     </section>
-    
-
-    <!-- slider nav -->
-    <nav>
-        <a href="#" class="main-nav prev" data-nav="previous">Prev <span></span></a>
-        <a href="#" class="main-nav next" data-nav="next">Next <span></span></a>
-    </nav>
-
 
 
     <!-- 💛코드 제이쿼리 -->
@@ -117,11 +117,9 @@
     <script>
         //오토플레이
         //setInterval(할일,시간) 시간마다 할일
-        setInterval(function(){
+        setInterval(function () {
             $('nav .next').click();
-        },3000) //3초마다 할일실행
-
-
+        }, 3000) //3초마다 할일실행
     </script>
 
 </body>

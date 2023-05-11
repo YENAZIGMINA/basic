@@ -15,11 +15,11 @@ section .rgb {
     width: 500px;
     height: 300px;
     position: absolute;
-    top: 50%;
-    left: 50%;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
 }
 
-#rgbKineticSlider canvas {
+.rgbKineticSlider canvas {
     /* slider 자체에서 만들어진 canvas */
     position: absolute;
     /* 위치 맞추기위해서 */
@@ -27,15 +27,21 @@ section .rgb {
 
 nav .main-nav {
     position: absolute;
-    top: 50%;
-    background-color: #ff5454;
+/*     background-color: #ff5454;
     width: 55px; height: 30px;
     border-radius: 10px;
     text-align: center; line-height: 30px;
     font-size: 12px;
     letter-spacing: 2px;
     font-weight: bold;
-    text-transform: uppercase;
+    text-transform: uppercase; */
+    color: #fff;
+    z-index: 10;
+    top: 50%;
+    width: 30px; height: 30px;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    text-align: center; line-height: 30px;
 }
-nav .prev {left: 29%;}
-nav .next {right: 29%;}
+nav .prev {left: 0%;}
+nav .next {right: 0%;}
