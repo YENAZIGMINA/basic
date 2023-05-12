@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hover_effect</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="hover_effect">
+        <!-- ↓ gitHUB-Basic usage 복붙 -->
+        <div class="my-div"></div>
+    </div> <!-- .hover_effect end /직접작성 -->
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script> <!-- three.js cdn 복붙 (r128버전) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script> <!-- gsap cdn -->
+    <script src="js/hover-effect.umd.js"></script> <!-- 1)직접 스크립트 연결 -->
+
+    <script> //gitHUB-Basic usage 복붙
+        var myAnimation = new hoverEffect({
+            parent: document.querySelector('.my-div'),
+            intensity: 0.3,
+            image1: 'https://img.cgv.co.kr/Movie/Thumbnail/StillCut/000086/86341/86341213986_727.jpeg', //이미지는 주소가져옴
+            image2: 'https://img.cgv.co.kr/Movie/Thumbnail/StillCut/000086/86341/86341213989_727.jpeg',
+            displacementImage: 'img/16.jpg', //'images/myDistorsionImage.png'
+            imagesRatio:700/800 //이미지비율 높이,넓이순 기재
+        });
+    </script>
+
+</body>
+
+</html>

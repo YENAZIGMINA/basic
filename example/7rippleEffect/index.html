@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    https://www.cssscript.com/demo/realistic-water-ripple-effect/
+
+
+    <div class="demo-btn">
+		<h1>Using Start/Stop</h1>
+		<div class="balloon-ctr">
+			<div class='div5 demo'></div>
+			<div class="controls">
+				<button class="start control btn btn_primary">Start</span>
+				<button class="stop control btn btn_primary">Stop</span>
+			</div>
+		</div>
+	</div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script> <!-- 1)페이지소스보기에서 스크립트 복사 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script> <!-- 1)페이지소스보기에서 스크립트 복사 -->
+    <script src="js/ripple-effect.min.js"></script>
+
+    <script> // 3)직접 script 태그열고, 적용할 소스 복붙
+        var ripple6 = new RippleEffect({
+            parent: document.querySelector('.div5'),
+            texture: 'star.jpg', // 이미지저장해서 가져옴
+            intensity: 1.2,
+            strength: .5,
+            waveSpeed: 0.008,
+            hover: false
+        });
+        document.querySelector('.start').addEventListener('click', ripple6.start);
+        document.querySelector('.stop').addEventListener('click', ripple6.stop);
+
+    </script>
+</body>
+
+</html>
