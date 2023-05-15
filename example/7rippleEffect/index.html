@@ -14,7 +14,7 @@
 
 
     <div class="demo-btn">
-		<h1>Using Start/Stop</h1>
+		<h1>Universe Start/Stop</h1>
 		<div class="balloon-ctr">
 			<div class='div5 demo'></div>
 			<div class="controls">
@@ -33,13 +33,16 @@
         var ripple6 = new RippleEffect({
             parent: document.querySelector('.div5'),
             texture: 'star.jpg', // 이미지저장해서 가져옴
-            intensity: 1.2,
-            strength: .5,
-            waveSpeed: 0.008,
+            intensity: 5.2,
+            strength: .8,
+            waveSpeed: 0.003,
             hover: false
         });
         document.querySelector('.start').addEventListener('click', ripple6.start);
+        document.querySelector('.start').click();
         document.querySelector('.stop').addEventListener('click', ripple6.stop);
+        document.querySelector('.div5').addEventListener('mouseenter', ripple6.stop); /* 마우스올렸을때 멈추기 */
+        document.querySelector('.div5').addEventListener('mouseleave', ripple6.start); /* 마우스 떠났을 때 시작하기 */
 
     </script>
 </body>

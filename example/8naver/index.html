@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="header">
+        <a href="#">
+            <img src="img/NAVER_CI_Green.png" alt="logo">
+        </a>
+    </div> <!-- .header end -->
+
+    <div id="wrapper">
+        <div class="content">
+            
+            <!-- id -->
+            <h3 class="join_title">
+                <label for="id">아이디</label>
+            </h3>
+            <span class="box int_id">
+                <input type="text" id="id" class="int" maxlength="20">
+                <span class="step_url">@naver.com</span>
+            </span>
+            <span class="error_next_box e1">에러출력</span>
+            <!-- /id -->
+
+            <!-- pw -->
+            <h3 class="join_title">
+                <label for="psw1">비밀번호</label>
+            </h3>
+            <span class="box int_pass">
+                <input type="text" id="psw1" class="int" maxlength="16">
+                <span id="alertTxt">사용불가</span>
+                <img src="img/m_icon_pass.png" alt="비밀번호" id="pswd1_img1" class="paswdImg">
+            </span>
+            <span class="error_next_box e2">에러출력</span>
+            <!-- /pw -->
+
+        </div><!-- content end -->
+    </div> <!-- #wrapper end -->
+
+
+    <script src="main.js"></script>
+
+</body>
+
+</html>
