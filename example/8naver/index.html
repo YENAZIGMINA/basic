@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>네이버 로그인</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -30,7 +30,7 @@
             <span class="error_next_box e1">에러출력</span>
             <!-- /id -->
 
-            <!-- pw -->
+            <!-- pw1 -->
             <h3 class="join_title">
                 <label for="psw1">비밀번호</label>
             </h3>
@@ -40,7 +40,35 @@
                 <img src="img/m_icon_pass.png" alt="비밀번호" id="pswd1_img1" class="paswdImg">
             </span>
             <span class="error_next_box e2">에러출력</span>
-            <!-- /pw -->
+            <!-- /pw1 -->
+
+            <!-- pw2 확인 -->
+            <div>
+                <h3 class="join_title">
+                    <label for="pswd2">비밀번호 재확인</label>
+                </h3>
+                <span class="box int_pass_check">
+                    <input type="text" id="pswd2" class="int" maxlength="20">
+                    <span id="alertTxt">사용불가</span>
+                    <img src="img/m_icon_check_disable.png" alt="비밀번호" id="pswd2_img1" class="paswdImg">
+                </span>
+                <span class="error_next_box e3">에러출력</span>
+            </div>
+            <!-- /pw2 확인 -->
+
+            <!-- name -->
+            <div>
+                <h3 class="join_title">
+                    <label for="name">이름</label>
+                </h3>
+                <span class="box int_name">
+                    <input type="text" id="name" class="int" maxlength="20">
+                </span>
+                <span class="error_next_box e4">
+                    
+                </span>
+            </div>
+            <!-- /name -->
 
         </div><!-- content end -->
     </div> <!-- #wrapper end -->
