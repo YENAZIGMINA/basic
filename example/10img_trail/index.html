@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>img_trail</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="top" style="height: 100vh; background: #ccc;">
+    </div> <!-- .top end -->
+
+    <div class="main">
+        <h1>Image-Trail</h1>
+        <div class="img img-1"></div>
+        <div class="img img-2"></div>
+        <div class="img img-3"></div>
+        <div class="img img-4"></div>
+        <div class="img img-5"></div>
+    </div><!-- .main end -->
+
+    <div class="bottom" style="height: 100vh; background: #ccc;">
+    </div> <!-- .bottom end -->
+
+
+    <script>
+        let img1=document.querySelector('.img-1'),
+            img2=document.querySelector('.img-2'),
+            img3=document.querySelector('.img-3'),
+            img4=document.querySelector('.img-4'),
+            img5=document.querySelector('.img-5');
+
+
+        document.addEventListener('mousemove',function(e){
+            img1.setAttribute("style","top:"+(e.clientY - 220)+"px; left:"+(e.clientX - 200)+"px")
+            //숫자를 문자로 인식해서 "+숫자+" 작성해줘야함
+            img2.setAttribute("style","top:"+(e.clientY - 220)+"px; left:"+(e.clientX- 200)+"px")
+            img3.setAttribute("style","top:"+(e.clientY - 220)+"px; left:"+(e.clientX- 200)+"px")
+            img4.setAttribute("style","top:"+(e.clientY - 220)+"px; left:"+(e.clientX- 200)+"px")
+            img5.setAttribute("style","top:"+(e.clientY - 220)+"px; left:"+(e.clientX- 200)+"px")
+        })
+        // e.clientY - 220 : - 220 주는 이유는 마우스 커서 중앙으로 위치하려고
+        // https://hianna.tistory.com/493 사이트 참고
+
+
+
+    </script>
+</body>
+</html>
