@@ -18,7 +18,7 @@
 
     <div id="wrapper">
         <div class="content">
-            
+
             <!-- id -->
             <h3 class="join_title">
                 <label for="id">아이디</label>
@@ -31,15 +31,17 @@
             <!-- /id -->
 
             <!-- pw1 -->
-            <h3 class="join_title">
-                <label for="psw1">비밀번호</label>
-            </h3>
-            <span class="box int_pass">
-                <input type="text" id="psw1" class="int" maxlength="16">
-                <span id="alertTxt">사용불가</span>
-                <img src="img/m_icon_pass.png" alt="비밀번호" id="pswd1_img1" class="paswdImg">
-            </span>
-            <span class="error_next_box e2">에러출력</span>
+            <div>
+                <h3 class="join_title">
+                    <label for="psw1">비밀번호</label>
+                </h3>
+                <span class="box int_pass">
+                    <input type="text" id="psw1" class="int" maxlength="16">
+                    <span id="alertTxt">사용불가</span>
+                    <img src="img/m_icon_pass.png" alt="비밀번호" id="pswd1_img1" class="paswdImg">
+                </span>
+                <span class="error_next_box e2">에러출력</span>
+            </div>
             <!-- /pw1 -->
 
             <!-- pw2 확인 -->
@@ -65,10 +67,52 @@
                     <input type="text" id="name" class="int" maxlength="20">
                 </span>
                 <span class="error_next_box e4">
-                    
+
                 </span>
             </div>
             <!-- /name -->
+
+            <!-- 생년월일 -->
+            <div>
+                <h3 class="join_title">
+                    <label for="yy">생년월일</label>
+                </h3>
+                <div id="birth_wrap">
+                    <!-- 생년 -->
+                    <div id="bir_yy">
+                        <div class="box">
+                            <input type="text" id="yy" class="int" maxlength="4" placeholder="년(4)">
+                        </div> <!-- .box end -->
+                    </div> <!-- #bir_yy end -->
+                    <div id="bir_mm">
+                        <span class="box">
+                            <select id="mm" class="sel">
+                                <option>월</option>
+                                <option value="01">1</option>
+                                <option value="02">2</option>
+                                <option value="03">3</option>
+                                <option value="04">4</option>
+                                <option value="05">5</option>
+                                <option value="06">6</option>
+                                <option value="07">7</option>
+                                <option value="08">8</option>
+                                <option value="09">9</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                            </select>
+                        </span>
+                    </div> <!-- #bir_mm end -->
+                    <div id="bir_dd">
+                        <div class="box">
+                            <input type="text" id="dd" class="int" maxlength="2" placeholder="일">
+                        </div> <!-- box end -->
+                    </div> <!-- #bir_dd end -->
+                </div> <!-- #birth_wrap end -->
+                
+                <span class="error_next_box e5">에러출력</span>
+            </div>
+            <!-- /생년월일 -->
 
         </div><!-- content end -->
     </div> <!-- #wrapper end -->

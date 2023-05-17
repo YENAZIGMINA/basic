@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>skroller</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="text"></div>
+    <div class="fixed-bg" 
+    data-500="background-color:rgb(112,188,32)" 
+    data-1000="background-color:rgb(50,50,60)"></div>
+    <!-- .fixed-bg end -->
+    <!-- 4) △ Now let's do a barrel roll at the same time 복붙 -->
+
+
+    <section id="slide01" class="slide"
+    data-0="top:0%" data-500="top:-100%">
+        <div class="slide-content">
+            <h2>제목입니다1. 제목입니다1.</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora reiciendis architecto debitis iusto
+                molestiae sequi praesentium aperiam distinctio officia illum.</p>
+        </div> <!-- .slide-content end -->
+    </section>
+
+    <section id="slide02" class="slide"
+    data-500="opacity:0; transform:translateX(100%)"
+    data-1000="opacity:1; transform:translateX(0%)"
+    data-2000="opacity:0; "
+    >
+        <h2>제목입니다2. 제목입니다2.</h2>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora reiciendis architecto debitis iusto
+            molestiae sequi praesentium aperiam distinctio officia illum.</p>
+    </section>
+
+
+
+    <script src="js/skrollr.min.js"></script> <!-- 1)dist 이름으로 만든js -->
+    <script>
+        //2)Let's get serious 내용 복붙
+        var s = skrollr.init();
+        //여기서부터는 내가 작성함
+        let text = document.querySelector('.text');
+        window.addEventListener("scroll", function () {
+            let wScroll = window.pageYOffset; // pageYOffset :페이지 스크롤 좌표값 당겨오기
+            console.log(parseInt(wScroll)) //parseInt : 소수점을 없애고 정수로 바꿈
+            text.innerHTML = parseInt(wScroll) //화면에 스크롤위치값 작성하기
+        })
+    </script>
+</body>
+
+</html>

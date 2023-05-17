@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>text_scroll_ani</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="top" style="height: 100vh; background-color: black;"></div>
+
+    <div class="main">
+        <div class="cover">
+            <div class="first-parallel">
+                
+            </div> <!-- .first-parallel end -->
+        </div> <!-- .cover end -->
+        <div class="cover">
+
+            <div class="second-parallel">
+
+            </div> <!-- .second-parallel end -->
+        </div> <!-- .cover end -->
+    </div> <!-- .main -->
+
+
+    <div class="bottom" style="height: 100vh; background-color: black;"></div>
+
+
+    <script>
+        let pTag1=document.querySelector('.first-parallel');
+        let pTag2=document.querySelector('.second-parallel');
+
+        let textArr1='This is how life is. Live positive. 🤍'.split(' ');
+        //split : 띄워쓰기를 기준으로 "잘라서" 배열
+        //console.log(textArr1)
+
+        let textArr2='Happiness and sadness alternate in our lives 🤍'.split(' ');
+        //console.log(textArr2)
+
+        //let arr=[]; //배열만들기
+        //arr.push(...textArr1) //push : 집어넣어라~
+        //console.log(arr)
+
+
+        let count1 = 0;
+
+        initTexts(pTag1,textArr1)
+
+        function initTexts (element,textArry){
+            textArry.push(...textArry) //7개의 배열에 동일한 배열을 복사하여 배열뒤에 붙여넣음 (총 14개 배열)
+            //console.log(textArry)
+            for(let i=0; i<textArry.length; i++){
+                //textArry.length -> textArry의 총개수만큼
+                element.innerHTML += `${textArry[i]}\u00A0\u00A0`;
+                //[i]넣어서 배열 넣어주기
+                // \u00A0 : 띄워쓰기(공백 넣어주기)
+            }
+        }
+        //------------------------글자입력💛
+
+        function animate(){
+            count1++;
+            //console.log(count1)
+
+            count1=marqueeText(count1,pTag1,-1); //pTag1을 움직이고 -1방향
+
+            window.requestAnimationFrame(animate) 
+            //requestAnimationFrame는 setInterval의 업그레이드 버전
+            //animate함수를 다시 실행
+        }
+
+        function marqueeText(count, element, direction){
+            //scrollWidth ---> 보이지않는 공간일지라도 스크롤해서 확인할 수 있는 공간까지의 넓이, 전체넓이 
+            //console.log(element.scrollWidth)
+            if(count>element.scrollWidth / 2){
+                count=0; // 0값을 줘야 빈틈안생김
+                element.style.transform=`translate(0,0)`
+            }
+
+            element.style.transform=`translate(${count * direction}px,0)`
+            // * direction : 반대방향
+            return count;
+        }
+
+        animate();
+
+
+    </script>
+</body>
+</html>

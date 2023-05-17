@@ -52,6 +52,27 @@ h3 {
     font-size: 15px; color: #828282;
 }
 
+/* 생년월일 */
+#birth_wrap {
+    display: flex;
+    justify-content: space-between;
+}
+#bir_yy {width: 147px;}
+#bir_mm {width: 147px;}
+#bir_dd {width: 147px;}
+
+select.sel {
+    border: none;
+    width: 100%;
+    font-size: 15px;
+    appearance: none; /* 다운화살표 모양 없애기 */
+    background: url(img/sel_arr_2x.gif) no-repeat 100% 50%;
+    background-size: 20px 8px;
+    outline: none;
+}
+
+
+
 /* 에러메시지 */
 .error_next_box {
     display: none;
