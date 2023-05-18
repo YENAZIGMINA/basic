@@ -1,0 +1,15 @@
+@charset "UTF-8";
+*{margin: 0; padding: 0;}
+
+/* ❗sticky에서는 position:sticky주체의 부모들은
+    overflow:hidden이 있어서는 안됨 */
+
+    .main {}
+    .main .row {
+        display: flex;
+        background-color: lightseagreen;
+    }
+    .main .row .col {}
+    .main .row .col .child {
+        width: 80%;
+    }

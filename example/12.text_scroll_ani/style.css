@@ -29,4 +29,8 @@ body {
 .cover:nth-child(1){
     transform: rotate(-2deg);
 }
-.cover:nth-child(2){margin-top: 20vh;}
+.cover:nth-child(2){
+    margin-top: 20vh;
+    justify-content: flex-end;
+    transform: rotate(4deg);
+}

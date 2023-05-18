@@ -46,8 +46,12 @@
 
 
         let count1 = 0;
+        let count2 = 0;
+
 
         initTexts(pTag1,textArr1)
+        initTexts(pTag2,textArr2)
+
 
         function initTexts (element,textArry){
             textArry.push(...textArry) //7개의 배열에 동일한 배열을 복사하여 배열뒤에 붙여넣음 (총 14개 배열)
@@ -64,8 +68,10 @@
         function animate(){
             count1++;
             //console.log(count1)
+            count2++;
 
             count1=marqueeText(count1,pTag1,-1); //pTag1을 움직이고 -1방향
+            count2=marqueeText(count2,pTag2,1); // 1 방향
 
             window.requestAnimationFrame(animate) 
             //requestAnimationFrame는 setInterval의 업그레이드 버전
@@ -85,7 +91,14 @@
             return count;
         }
 
+        function scrollHandler (){
+            count1 += 25; // 2) 스크롤움질일 때 더 빨리
+            count2 += 25;
+        }
+
         animate();
+
+        window.addEventListener("scroll",scrollHandler) //1) 스크롤움질일 때 더 빨리
 
 
     </script>

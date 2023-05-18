@@ -22,6 +22,12 @@
     margin: 0 auto;
     font-size: 25px;
 }
+
+#slide04 {
+    background: url(img/stars.gif);
+}
+
+
 .fixed-bg {
     position: fixed;
     top: 0; left: 0;
