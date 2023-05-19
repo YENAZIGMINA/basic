@@ -1,0 +1,33 @@
+@charset "UTF-8";
+
+body {
+    background-color: #121212;
+    margin: 0; padding: 0;
+}
+a {color: #fff; text-decoration: none;}
+.cursor {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%,-50%);
+    width: 600px; height: 400px;
+    background: url(img/image-1.jpg) no-repeat;
+    background-size: cover;
+    transform: scale(0.1); /* 10%로 줄임 */
+    opacity: 0;
+}
+
+.wrapper {
+    width: 80%; 
+    margin: 180px auto;
+}
+.project {
+    color: #fff;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    height: 80px;
+}
+
+.project-overay {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

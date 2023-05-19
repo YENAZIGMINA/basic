@@ -8,8 +8,34 @@
     .main .row {
         display: flex;
         background-color: lightseagreen;
+        width: 100%;
     }
-    .main .row .col {}
+    .main .row .col {
+        border: 1px solid orange;
+        width: 20%;
+        height: 300vh; /* ❗ */
+        display: flex;
+        justify-content: center;
+        box-sizing: border-box;
+    }
     .main .row .col .child {
-        width: 80%;
+        width: 80%; height: 200px;
+        background-color: rgb(152, 255, 221);
+        position: sticky; /* ❗스티키는 top값, 부모 높이값 있어야함 */
+        top: 0; /* ❗ */ /* 스티키는 화면에 닿는순간 포지션fixed된다고 생각하면 됨 */
+    }
+    .main .row .col:nth-child(1) {
+        padding-top: 10%;
+    }
+    .main .row .col:nth-child(2) {
+        padding-top: 20%;
+    }
+    .main .row .col:nth-child(3) {
+        padding-top: 30%;
+    }
+    .main .row .col:nth-child(4) {
+        padding-top: 40%;
+    }
+    .main .row .col:nth-child(5) {
+        padding-top: 50%;
     }

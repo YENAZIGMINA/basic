@@ -9,6 +9,9 @@ let username = document.querySelector('#name');
 let yy = document.querySelector('#yy');
 let mm = document.querySelector('#mm');
 let dd = document.querySelector('#dd');
+let gender = document.querySelector('#gender');
+let email = document.querySelector('#email');
+let mobile = document.querySelector('#phoneNum')
 
 console.log(error)
 
@@ -24,6 +27,15 @@ username.addEventListener('focusout',checkName)
 yy.addEventListener('focusout',isBirthCompleted)
 mm.addEventListener('focusout',isBirthCompleted)
 dd.addEventListener('focusout',isBirthCompleted)
+gender.addEventListener('focusout',function(){
+    if(gender.value == "성별"){
+        error[5].style.display="block";
+    }else{
+        error[5].style.display="none";
+    }
+})
+email.addEventListener('focusout',isEmaileCorrect)
+mobile.addEventListener('focusout',checkPhoneNum)
 
 
 /* 아이디 확인 */
@@ -174,5 +186,36 @@ function isBirthCompleted(){
             error[4].innerHTML="만 14세 미만의 어린이는 보호자 동의가 필요합니다."
             error[4].style.display="block";
         }
+    }
+}
+
+
+/* 이메일 확인 */
+function isEmaileCorrect (){
+    let emailPattern=/[a-zA-Z0-9_]{2,}@[a-zA-Z]{2,}\.[a-zA-Z]{2,}/;
+    if(email.value == ""){
+        error[6].style.display="none";
+    }else if(!emailPattern.test(email.value)){
+        error[6].style.display="block";
+        //🔹↓이메일 작성하다가 칸 빠져나오면 글 삭제됨
+        email.value = null; 
+        email.focus();
+    }else{
+        error[6].style.display="none";
+    }
+}
+
+
+/* 휴대폰번호 확인 */
+function checkPhoneNum (){
+    let isPhoneNum=/([01]{2})([01679]{1})([0-9]{3,4})([0-9]{4})/;
+    if(mobile.value == ""){
+        error[7].innerHTML = "필수정보 입니다."
+        error[7].style.display="block";
+    }else if(!isPhoneNum.test(mobile.value)){
+        error[7].innerHTML = "형식에 맞지 않는 번호입니다."
+        error[7].style.display="block";
+    }else{
+        error[7].style.display="none";
     }
 }

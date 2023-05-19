@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gsqp 라이브러리</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="main">
+        <div class="cursor"></div> <!-- .cursor end -->
+
+            <div class="wrapper">
+                <div class="project p-1">
+                    <div class="project-overay">
+                        <div class="project_title">
+                            <h2><a href="#">MotionLand1</a></h2>
+                        </div> <!-- .project_title end -->
+                        <div class="project-categ">
+                            Branding
+                        </div> <!-- .project-categ end -->
+                    </div> <!-- .project-overay end -->
+                </div> <!-- .p-1 end -->
+
+                <div class="project p-2">
+                    <div class="project-overay">
+                        <div class="project_title">
+                            <h2><a href="#">MotionLand2</a></h2>
+                        </div> <!-- .project_title end -->
+                        <div class="project-categ">
+                            Branding
+                        </div> <!-- .project-categ end -->
+                    </div> <!-- .project-overay end -->
+                </div> <!-- .p-2 end -->
+
+                <div class="project p-3">
+                    <div class="project-overay">
+                        <div class="project_title">
+                            <h2><a href="#">MotionLand3</a></h2>
+                        </div> <!-- .project_title end -->
+                        <div class="project-categ">
+                            Branding
+                        </div> <!-- .project-categ end -->
+                    </div> <!-- .project-overay end -->
+                </div> <!-- .p-3 end -->
+
+                <div class="project p-4">
+                    <div class="project-overay">
+                        <div class="project_title">
+                            <h2><a href="#">MotionLand4</a></h2>
+                        </div> <!-- .project_title end -->
+                        <div class="project-categ">
+                            Branding
+                        </div> <!-- .project-categ end -->
+                    </div> <!-- .project-overay end -->
+                </div> <!-- .p-4 end -->
+            </div> <!-- .wrapper end -->
+
+    </div> <!-- .main end -->
+
+
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script><!-- 코드제이쿼리 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script><!-- 1) gsap사이트 DOCS - cdn 복붙 -->
+
+    <script>
+        /* 3)gsap - 코드펜 JS 복붙
+        gsap.to(".green", {
+            rotation: 360,
+            x: 100,
+            duration: 1
+        }); */
+
+
+        $('.p-1').hover(function(){
+            $('.cursor').css({backgroundImage:"url(img/image-1.jpg)"})
+        })
+        $('.p-2').hover(function(){
+            $('.cursor').css({backgroundImage:"url(img/image-2.jpg)"})
+        })
+        $('.p-3').hover(function(){
+            $('.cursor').css({backgroundImage:"url(img/image-3.jpg)"})
+        })
+        $('.p-4').hover(function(){
+            $('.cursor').css({backgroundImage:"url(img/image-4.jpg)"})
+        })
+
+
+        let cursor = $('.cursor');
+        let overlay = $('.project-overay');
+
+        overlay.mousemove(function(){ 
+            gsap.to(cursor,{opacity:1, scale:1, duration:0.5})
+        })
+
+    </script>
+</body>
+
+</html>
