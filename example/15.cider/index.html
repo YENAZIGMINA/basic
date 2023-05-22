@@ -1,13 +1,85 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>칠성사이다</title>
+    <!-- 슬릭 css cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+    <!-- 폰트어썸 css cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" />
+    <!-- style -->
     <link rel="stylesheet" href="sytle.css">
 </head>
+
 <body>
-    
+    <section id="section1" class="history">
+        <div class="history_story">
+
+            <div class="container">
+                <div class="history_title">
+                    <h2>많은 사람이 함께한 <br>
+                        <em>칠성사이다, </em>70년의 추억</h2>
+                </div> <!-- .history_title end -->
+
+                <div class="history_btn">
+                    <ul class="clearfix">
+                        <li class="active"><a href="#">1950's</a></li>
+                        <li><a href="#">1960's</a></li>
+                        <li><a href="#">1970's</a></li>
+                        <li><a href="#">1980's</a></li>
+                        <li><a href="#">1990's~</a></li>
+                    </ul>
+                </div> <!-- .history_btn end -->
+                <div class="history_slide_wrap">
+                    <div class="history_slide">
+                        <div><img src="img/history_1950_00.png" alt="1950"></div>
+                        <div><img src="img/history_1950_01.png" alt="1950"></div>
+                        <div><img src="img/history_1950_02.png" alt="1950"></div>
+                        <div><img src="img/history_1950_03.png" alt="1950"></div>
+                        <div><img src="img/history_1960_00.png" alt="1960"></div>
+                        <div><img src="img/history_1960_01.png" alt="1960"></div>
+                        <div><img src="img/history_1960_02.png" alt="1960"></div>
+                        <div><img src="img/history_1960_03.png" alt="1960"></div>
+                        <div><img src="img/history_1970_00.png" alt="1970"></div>
+                        <div><img src="img/history_1970_01.png" alt="1970"></div>
+                        <div><img src="img/history_1970_02.png" alt="1970"></div>
+                        <div><img src="img/history_1970_03.png" alt="1970"></div>
+                        <div><img src="img/history_1980_00.png" alt="1980"></div>
+                        <div><img src="img/history_1980_01.png" alt="1980"></div>
+                        <div><img src="img/history_1980_02.png" alt="1980"></div>
+                        <div><img src="img/history_1980_03.png" alt="1980"></div>
+                        <div><img src="img/history_1990_00.png" alt="1990"></div>
+                        <div><img src="img/history_1990_01.png" alt="1990"></div>
+                        <div><img src="img/history_1990_02.png" alt="1990"></div>
+                        <div><img src="img/history_1990_03.png" alt="1990"></div>
+                    </div> <!-- .history_slide end -->
+                </div> <!-- .history_slide_wrap end -->
+                
+                <div class="history_page">
+                    <em>1</em>/<strong>20</strong>
+                </div> <!-- .history_page end -->
+            </div> <!-- .container end -->
+
+        </div> <!-- .history_story end -->
+    </section> <!-- #section1 / .history end -->
+
+
+
+
+    <!-- 코드 제이쿼리 -->
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <!-- 슬릭 js cdn -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+
+
+    <script>
+        $('.history_slide').slick({
+
+        });
+    </script>
 </body>
+
 </html>

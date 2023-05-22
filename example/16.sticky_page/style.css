@@ -43,6 +43,7 @@ body {
     height: 100vh;
     position: sticky; /* ✔세뚜세뚜 // 부모중에 오버플로우 없어야함 */
     top: 0; /* ✔세뚜세뚜 */
+    overflow: hidden;
 }
 
 .sticky-title {
