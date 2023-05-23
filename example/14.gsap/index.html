@@ -92,8 +92,13 @@
         let cursor = $('.cursor');
         let overlay = $('.project-overay');
 
-        overlay.mousemove(function(){ 
+        overlay.mousemove(function(e){ 
             gsap.to(cursor,{opacity:1, scale:1, duration:0.5})
+            gsap.to(cursor,{left:e.pageX, top:e.pageY, delay:0.03})
+        })
+
+        $('.main').mouseleave(function(){
+            gsap.to(cursor,{opacity:0, scale:0.1})
         })
 
     </script>

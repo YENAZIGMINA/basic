@@ -34,7 +34,7 @@ body {
 }
 
 
-/* 💙section1 */
+/* 💙section1 / history_story */
 #section1 {
     padding-top: 200px;
 }
@@ -130,3 +130,73 @@ body {
     margin-top: -33px;
     z-index: 20;
 }
+
+
+
+/* 💙 history_poster*/
+.history_poster {
+    background-color: #f7f7f7;
+    padding-top: 100px;
+    margin-top: 25px;
+}
+
+.poster_title {}
+.poster_title h2 {
+    font-size: 56px;
+    text-align: center;
+    font-weight: 700;
+    color: #222;
+    padding: 50px;
+}
+
+.poster_btn {}
+.poster_btn ul {
+    width: 40%; /* 부모의 40% */
+    margin: 0 auto;
+}
+.poster_btn ul li {
+    float: left;
+    width: 25%;
+
+}
+.poster_btn ul li a {
+    position: relative;
+    display: block;
+    padding: 5px 0;
+    letter-spacing: -0.5px;
+}
+.poster_btn ul li a::before {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 31px;
+    display: block;
+    height: 3px; width: 0px;
+    background-color: #00a651;
+    transition: .3s;
+}
+.poster_btn ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0; right: 84px;
+    display: block;
+    height: 3px; width: 0px;
+    background-color: #00a651;
+    transition: .3s;
+}
+.poster_btn ul li:hover a::before {
+    height: 3px; width: 50px;
+    color: #00a651;
+}
+.poster_btn ul li:hover a::after {
+    height: 3px; width: 50px;
+}
+
+.poster_cont{}
+.poster figure {}
+.poster figure img {}
+.poster figure figcaption {}
+
+.poster.po1 {}
+.poster.po2 {}
+.poster.po3 {}
+.poster.po4 {}

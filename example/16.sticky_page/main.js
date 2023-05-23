@@ -32,6 +32,25 @@ function floderScroll(wrapper,sticky){
     })
 }
 
+
+function animate(){
+    //console.log('scrollY: '+scrollY)
+    children.forEach((child,i)=>{
+        let unit = (end - start)/_length;
+        let s = start + unit * i;
+        let e = start + unit * (i + 1);
+
+        if(scrollY <= s){
+            child.style.transform=`translate(0,0)`;
+        }else if(scrollY > e){
+            child.style.transform=`translate(0,${-contentVh}%)`;
+        }
+    })
+}
+
+
+
+
 let mainContent=document.querySelector('.main-content')
 let $sticky=document.querySelector('.sticky')
 
@@ -39,4 +58,5 @@ floderScroll(mainContent,$sticky) //매개변수,인자값(같은이름못써서
 
 window.addEventListener('scroll',function(){
     console.log('scrollY: '+scrollY)
+    animate();
 })

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>loco 예제</title>
+    <!-- 로코모티브 css cdn -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css">
+    <!-- style -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="data-scroll-container">
+
+    </div> <!-- .data-scroll-container end -->
+
+
+
+
+
+    <!-- 로코모티브 js cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
+
+    <script>
+        /* Or without 복붙 */
+        (function () {
+            var scroll = new LocomotiveScroll();
+        })();
+
+        /* Smooth밑에 const 복붙 */
+        const scroll = new LocomotiveScroll({
+            el: document.querySelector('[data-scroll-container]'),
+            smooth: true
+        });
+    </script>
+
+</body>
+
+</html>
