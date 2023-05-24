@@ -9,7 +9,9 @@ hCont.slick({
 
 
 /* ✔ 버튼을 클릭하면 해당 index를 찾아서 가기 */
-hBtn.click(function(){
+hBtn.click(function(e){
+    e.preventDefault();
+
     let target = $(this); //클릭한 그것 선택
     let index = target.index(); // 클릭한 그것의 index 번호
     //console.log(index)
@@ -54,5 +56,39 @@ hCont.on('beforeChange', function(event, slick, currentSlide, nextSlide){
         hBtn.removeClass('active')
         hBtn.eq(4).addClass('active')
     }
-    $('.history_page em').text(nextSlide + 1) //작성
+    $('.history_page em').text(nextSlide + 1) //직접 작성
+
+
+});
+
+
+
+//history_poster
+let posterBtn = $('.poster_btn ul li');
+let posterCont = $('.poster_cont .poster');
+
+//posterCont 모두 안보이게, 하지만 첫번째는 보이기
+posterCont.hide().eq(0).show();
+
+
+posterBtn.click(function(e){
+    e.preventDefault();
+
+    let target = $(this);
+    let index = target.index();
+    //console.log(index)
+    posterCont.hide().eq(index).fadeIn();
+    posterCont.find('figure').removeClass('move');
+    posterCont.eq(index).find('figure').addClass('move');
+
+
+    posterBtn.removeClass('active');
+    target.addClass('active');
+
+})
+
+
+
+$('.cider_bottle').slick({
+    
   });

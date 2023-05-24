@@ -44,6 +44,8 @@ function animate(){
             child.style.transform=`translate(0,0)`;
         }else if(scrollY > e){
             child.style.transform=`translate(0,${-contentVh}%)`;
+        }else{
+            child.style.transform=`translate(0,${-(scrollY - s) / (unit / contentVh)}%)`;
         }
     })
 }
@@ -59,4 +61,9 @@ floderScroll(mainContent,$sticky) //매개변수,인자값(같은이름못써서
 window.addEventListener('scroll',function(){
     console.log('scrollY: '+scrollY)
     animate();
+})
+
+//화면 사이즈가 달라지면 다시 설정하는 것
+window.addEventListener('resize',()=>{
+    floderScroll(mainContent,$sticky)
 })
