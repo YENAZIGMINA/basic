@@ -46,9 +46,55 @@
                     <span class="c_header_title_line">
                         <span>Scroll</span>
                     </span>
+                    <div class="title_last c_header_title_line">
+                        <span
+                        data-scroll
+                        data-scroll-speed="3"
+                        data-scroll-position="top"
+                        data-scroll-delay="0.05"
+                        >V</span>
+                        <span
+                        data-scroll
+                        data-scroll-speed="2"
+                        data-scroll-position="top"
+                        data-scroll-delay="0.05"
+                        >4</span>
+                        <span
+                        data-scroll
+                        data-scroll-speed="3"
+                        data-scroll-position="top"
+                        data-scroll-delay="0.05"
+                        >.</span>
+                        <span
+                        data-scroll
+                        data-scroll-speed="5"
+                        data-scroll-position="top"
+                        data-scroll-delay="0.05"
+                        >0</span>
+                    </div>
                 </h1>
+                <hr class="line" data-scroll
+                data-scroll-offset="100"
+                >
             </div> <!-- .container end -->
-        </header>
+        </header> <!-- /header end -->
+
+        <section class="two" data-scroll-section>
+            <!-- 큰영역에는 data-scroll-section 필수 -->
+            <div class="container clearfix">
+                <div class="two_left">
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae sint, nisi quod eius quae autem sed temporibus ipsum accusantium error unde consequatur voluptatibus, porro sunt vitae cupiditate! Suscipit odit voluptate, deserunt excepturi perspiciatis reprehenderit quibusdam.</p>
+                </div> <!-- .two_left end -->
+                <div class="two_right">
+                    <ul>
+                        <li data-scroll><a href="#">01.Speed Control</a><span>&darr;</span></li>
+                        <li data-scroll><a href="#">02.Scroll Direction</a><span>&darr;</span></li>
+                        <li data-scroll><a href="#">03.Lerp Effect</a><span>&darr;</span></li>
+                        <li data-scroll><a href="#">04.Fixed Elements</a><span>&darr;</span></li>
+                    </ul>
+                </div> <!-- .two_right end -->
+            </div> <!-- .container end -->
+        </section> <!-- .two end -->
     </div> <!-- .data-scroll-container end -->
 
 
@@ -69,6 +115,10 @@
             el: document.querySelector('[data-scroll-container]'),
             smooth: true
         });
+    </script>
+
+    <script>
+
     </script>
 
 </body>

@@ -59,7 +59,7 @@ header .container {
     font-size: 12vw;
     line-height: 0.9;
     text-transform: uppercase;
-    perspective: 600; /* 3D 원근감 주기 */
+    perspective: 600px; /* 3D 원근감 주기 */
     padding: 2.5em 0 0.5em; /* rem:body 기준 */
 }
 .title .c_header_title_line {
@@ -67,6 +67,75 @@ header .container {
     transform-style: preserve-3d;
     transform: translateY(100%)rotateX(-80deg);
     transform-origin: center top;
-    transition: 0.8s cubic-bezier(.215, .61, .355, 1);
+    transition: 0.8s 0.4s cubic-bezier(.215, .61, .355, 1);
 }
-.title .c_header_title_line span {}
+
+.is-inview .c_header_title_line {
+    transform: none;
+    opacity: 1;
+}
+
+.title .c_header_title_line span {
+    display: inline-block;
+}
+.title_last span {
+    color: #fff;
+    margin-left: -4%;
+}
+.title_last span:first-child {margin-left: 0;}
+
+
+/* 라인 */
+.line {
+    position: absolute;
+    bottom: 0; left: 0; right: 0; /* w100% 의미 */
+    display: block;
+    height: 1px;
+    border: 0; /* 우리가 주는 값으로 설정하기위해 border 0 */
+    border-top: 1px solid #272727;
+    transition: 0.6s cubic-bezier(.215, .61, .355, 1);
+    transform: scale(0);
+}
+.line.is-inview {
+    transform: scale(1);
+}
+
+
+/* two */
+.two {margin-top: 35px;}
+.two .two_left {
+    float: left; width: 40%;
+    padding-left: 20px;
+    font-size: 1.5vw;
+    font-weight: 600;
+    box-sizing: border-box;
+}
+.two .two_right {
+    float: right; width: 60%;
+    padding-left: 3.75rem;
+    box-sizing: border-box;
+}
+.two .two_right li {
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    transform: translateY(60px);
+    opacity: 0;
+    transition: 0.6s cubic-bezier(.215, .61, .355, 1);
+}
+.two .two_right li.is-inview {
+    transform: none;
+    opacity: 1;
+}
+.two .two_right li.is-inview:nth-child(1){
+    transition-delay: 0.5s;
+}
+.two .two_right li.is-inview:nth-child(2){
+    transition-delay: 0.6s;
+}
+.two .two_right li.is-inview:nth-child(3){
+    transition-delay: 0.7s;
+}
+.two .two_right li.is-inview:nth-child(4){
+    transition-delay: 0.8s;
+}
