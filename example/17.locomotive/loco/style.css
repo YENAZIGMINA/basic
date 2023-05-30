@@ -116,6 +116,7 @@ header .container {
     box-sizing: border-box;
 }
 .two .two_right li {
+    position: relative;
     font-size: 1.5rem;
     font-weight: 600;
     text-transform: uppercase;
@@ -139,3 +140,56 @@ header .container {
 .two .two_right li.is-inview:nth-child(4){
     transition-delay: 0.8s;
 }
+.two .two_right li a {}
+.two .two_right li a span {
+    position: absolute;
+    top: 50%; right: 0;
+    transform: translateY(-50%) translateX(30px) rotate(90deg);
+    transition: 0.6s cubic-bezier(.215, .61, .355, 1);
+    opacity: 0;
+}
+.two .two_right li.is-inview a span {
+    transform: translateY(-50%) translateX(0px) rotate(0deg);
+    opacity: 1;
+    transition-delay: 0.6s;
+}
+.two .two_right li::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0; /* w100%라는 의미 */
+    height: 1px;
+    background-color: #272727;
+    transform: scaleX(0);
+    transform-origin: left center; /* 시작지점 */
+    transition: 0.6s cubic-bezier(.215, .61, .355, 1);
+    z-index: 10;
+}
+.two .two_right li.is-inview::after {
+    transform: scaleX(1);
+    transition-delay: 0.6s;
+}
+
+/* three */
+.three {margin-bottom: 30vh;}
+.three .left1 {
+    position: relative;
+    width: 40%;
+    float: left;
+    top: 15vh; /* 값 안먹을때, position: relative; 주기 */
+}
+.three .right1 {
+    position: relative;
+    width: 60%;
+    float: right;
+    top: 15vh;
+    padding-left: 3.75rem;
+    box-sizing: border-box;
+}
+
+/* 이미지 */
+.o-image_wrapper {background-color: #d4c9c9;}
+.o-image {
+    mix-blend-mode: multiply; /* 밑 이미지컬러랑 섞이게 */
+    opacity: 0.8;
+}
+.o-image img {}
