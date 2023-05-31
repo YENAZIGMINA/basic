@@ -19,21 +19,13 @@
             <div class="container">
                 <div id="menu">
                     <div class="menu clearfix">
-                        <div class="menu_left"
-                        data-scroll
-                        data-scroll-direction="horizontal"
-                        data-scroll-position="top"
-                        data-scroll-speed="-4"
-                        >
+                        <div class="menu_left" data-scroll data-scroll-direction="horizontal" data-scroll-position="top"
+                            data-scroll-speed="-4">
                             <a href="#">LOCOMOTIVE.CA</a>
                         </div> <!-- .menu_left end -->
-                        
-                        <div class="menu_right"
-                        data-scroll
-                        data-scroll-direction="horizontal"
-                        data-scroll-position="top"
-                        data-scroll-speed="4"
-                        >
+
+                        <div class="menu_right" data-scroll data-scroll-direction="horizontal"
+                            data-scroll-position="top" data-scroll-speed="4">
                             <a href="#">V4-EDITION🚀🛸🌠</a>
                         </div> <!-- .menu_right end -->
                     </div>
@@ -47,35 +39,17 @@
                         <span>Scroll</span>
                     </span>
                     <div class="title_last c_header_title_line">
-                        <span
-                        data-scroll
-                        data-scroll-speed="3"
-                        data-scroll-position="top"
-                        data-scroll-delay="0.05"
-                        >V</span>
-                        <span
-                        data-scroll
-                        data-scroll-speed="2"
-                        data-scroll-position="top"
-                        data-scroll-delay="0.05"
-                        >4</span>
-                        <span
-                        data-scroll
-                        data-scroll-speed="3"
-                        data-scroll-position="top"
-                        data-scroll-delay="0.05"
-                        >.</span>
-                        <span
-                        data-scroll
-                        data-scroll-speed="5"
-                        data-scroll-position="top"
-                        data-scroll-delay="0.05"
-                        >0</span>
+                        <span data-scroll data-scroll-speed="3" data-scroll-position="top"
+                            data-scroll-delay="0.05">V</span>
+                        <span data-scroll data-scroll-speed="2" data-scroll-position="top"
+                            data-scroll-delay="0.05">4</span>
+                        <span data-scroll data-scroll-speed="3" data-scroll-position="top"
+                            data-scroll-delay="0.05">.</span>
+                        <span data-scroll data-scroll-speed="5" data-scroll-position="top"
+                            data-scroll-delay="0.05">0</span>
                     </div>
                 </h1>
-                <hr class="line" data-scroll
-                data-scroll-offset="100"
-                >
+                <hr class="line" data-scroll data-scroll-offset="100">
             </div> <!-- .container end -->
         </header> <!-- /header end -->
 
@@ -83,11 +57,15 @@
             <!-- 큰영역에는 data-scroll-section 필수 -->
             <div class="container clearfix">
                 <div class="two_left">
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae sint, nisi quod eius quae autem sed temporibus ipsum accusantium error unde consequatur voluptatibus, porro sunt vitae cupiditate! Suscipit odit voluptate, deserunt excepturi perspiciatis reprehenderit quibusdam.</p>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae sint, nisi quod eius quae
+                        autem sed temporibus ipsum accusantium error unde consequatur voluptatibus, porro sunt vitae
+                        cupiditate! Suscipit odit voluptate, deserunt excepturi perspiciatis reprehenderit quibusdam.
+                    </p>
                 </div> <!-- .two_left end -->
                 <div class="two_right">
                     <ul>
-                        <li data-scroll><a href="#">01.Speed Control<span>&darr;</span></a></li>
+                        <li data-scroll><a href="#three" data-scroll-to>01.Speed Control<span>&darr;</span></a></li>
+                        <!-- ✔data-scroll-to를 넣으면 a태그 연결한 곳으로 날아감 -->
                         <li data-scroll><a href="#">02.Scroll Direction<span>&darr;</span></a></li>
                         <li data-scroll><a href="#">03.Lerp Effect<span>&darr;</span></a></li>
                         <li data-scroll><a href="#">04.Fixed Elements<span>&darr;</span></a></li>
@@ -96,7 +74,7 @@
             </div> <!-- .container end -->
         </section> <!-- .two end -->
 
-        <section class="three" data-scroll-section>
+        <section class="three" id="three" data-scroll-section>
             <div class="container">
                 <div class="three-1 clearfix">
                     <div class="left1">
@@ -108,14 +86,15 @@
                                 </h3>
                                 <div class="infos_text">
                                     <p>Each element can be animated at
-                                        a different speed. 
+                                        a different speed.
                                         You get to choo-choo-choose!</p>
                                 </div> <!-- .infos_text end -->
                             </div>
                         </div>
                     </div> <!-- .left1 end -->
                     <div class="right1">
-                        <div class="r1_sub" data-scroll>
+                        <div class="r1_sub" data-scroll data-scroll-speed="2">
+                            <!-- ✔locomotive.js 깃헙에서 값주는 이름 확인하기 -->
                             <div class="o-image_wrapper" data-scroll>
                                 <div class="o-image" data-scroll>
                                     <img src="img/locomotive01.jpg" alt="locomotive">
@@ -124,14 +103,57 @@
                                     Speed x2
                                 </p>
                             </div> <!-- .o-image_wrapper end -->
-                            <span class="c-speed-block_bublle" data-scroll>
+                            <span class="c-speed-block_bublle" data-scroll data-scroll-repeat data-scroll-speed="4">
                                 4x
                             </span>
                         </div> <!-- .r1_sub end -->
                     </div> <!-- .right1 end -->
                 </div> <!-- .three-1 end -->
+                <div class="three-2">
+                    <div data-scroll data-scroll-speed="4">
+                        <div class="o-image_wrapper" data-scroll>
+                            <div class="o-image" data-scroll data-scroll-speed="-1.5">
+                                <img src="img/locomotive02.jpg" alt="locomotive2">
+                            </div> <!-- o-image end -->
+                        </div> <!-- o-image_wrapper end -->
+                    </div>
+                </div> <!-- .three-2 end -->
             </div> <!-- .container end -->
         </section> <!-- .three end -->
+
+        <section class="four" id="four" data-scroll-section>
+            <div class="container" id="scroll-direction">
+                <div class="four-hegiht">
+                    <div class="four_text" data-scroll data-scroll-sticky data-scroll-target="#scroll-direction">
+                        <!-- ✔스크롤이 다 지나가기 전까지 target 위치값 스티키 고정 -->
+                        <h3>02. <br>
+                            Scroll Direction
+                        </h3>
+                        <div class="infos_text">
+                            <p>And if that wasn't enough, 
+                                make 'em go backwards. 
+                                Or upwards. Or downwards!</p>
+                        </div> <!-- infos_text end -->
+                    </div> <!-- four_text end -->
+
+                    <div class="c-direction-block" id="direction">
+                        <div class="c-direction-block_item one1">
+                            <span
+                            data-scroll
+                            data-scroll-speed="6"
+                            data-scroll-direction="horizontal"
+                            data-scroll-target="#direction"
+                            >I'm moving in this direction</span>
+                        </div> <!-- c-direction-block_item / one1 end -->
+                    </div> <!-- .c-direction-block / #direction end -->
+                </div> <!-- four-hegiht end -->
+
+            </div> <!-- .container end -->
+        </section> <!-- four end -->
+
+
+
+        <div class="space" style="height: 30vh;"></div>
     </div> <!-- .data-scroll-container end -->
 
 
