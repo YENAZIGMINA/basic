@@ -359,13 +359,13 @@ overflow: hidden;
     font-weight: 700;
     text-transform: uppercase;
     margin-bottom: 7rem; 
-    /* ↑스크롤 올릴때 이 공간이 없으면 튕겨 올라가므로 이 공간영역 설정 */
+    /* ↑스크롤 올릴때 이 공간(아래)이 없으면 튕겨 올라가므로 이 공간영역 설정 */
 }
 .lerp-block_index {
     position: relative;
     width: 3.75rem; height: 2.8rem;
     font-size: 1.25rem;
-    display: inline-flex; /* 인라인요소 성질이 있는 플렉스, 옆에 밑요소 붙음*/
+    display: inline-flex; /* 인라인요소 성질이 있는 플렉스, 옆에 밑요소 따라붙음*/
     justify-content: center;
     align-items: center;
     color: #d4c9c9;
