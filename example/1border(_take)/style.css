@@ -1,0 +1,73 @@
+@charset "UTF-8";
+*{margin: 0; padding: 0;}
+
+.loader{
+  height: 100vh;
+  background-color: rgb(8, 19, 21);
+}
+
+.loader .loader_tom{
+  position: relative;
+  width: 480px;
+  height: 480px;
+  overflow: hidden;
+  left: calc(50% - 240px) ;
+  top: calc(50% - 240px);
+  /* 수평:h,수직:v,왼쪽:l,오른쪽:r, 위쪽:t,아래쪽:b */
+  /* htl htr hbr hbl/vtl vtr vbr vbl */
+  /* border-radius: 30% 70% 53% 47% / 30% 39% 61% 70% ; */
+  animation: go 6s linear infinite alternate;
+
+}
+
+
+
+.loader .loader_tom img{
+  width: 120%;
+}
+
+.ro{
+  width: 480px;height: 480px;
+  position: absolute;
+  left: calc(50% - 240px) ;
+  top: calc(50% - 240px);
+  animation: rotate 6s linear infinite alternate;
+}
+.ro .loader_tom2{
+  position: absolute;
+  width: 480px;height: 480px;
+  border: 1px solid #dfdfdf;
+  animation: gob 6s linear infinite alternate;
+}
+.ro .loader_tom2.lt2{
+  left: 0; top: 0;
+  animation: go 6s linear infinite alternate;
+  animation-delay: 2s;
+  animation-fill-mode: both;
+}
+
+
+
+
+@keyframes go{
+  0%{border-radius: 21% 79% 47% 53% / 18% 38% 62% 82% ;
+  transform: scale(0.98);
+  }
+  50%{border-radius: 27% 73% 57% 43% / 27% 30% 70% 73% ;
+  }
+  100%{border-radius: 64% 36% 25% 75% / 40% 62% 38% 60% ;
+  transform: scale(1.02)}
+}
+
+@keyframes gob{
+  0%{border-radius: 70% 30% 48% 52% / 40% 31% 69% 60% ;
+  transform: scale(0.95);}
+  50%{border-radius: 58% 42% 40% 60% / 40% 43% 57% 60% ;}
+  100%{border-radius:50% 50% 30% 70% / 58% 43% 57% 42%  ;
+    transform: scale(1.02)}
+}
+
+@keyframes rotate{
+  0%{transform: rotate(0 deg);}
+  100%{transform: rotate(360 deg);}
+}
